@@ -1,0 +1,62 @@
+{
+    "version": "0.1.0",
+    "command": "sh",
+    "args": ["-c"],
+    "isShellCommand": true,
+    "showOutput": "always",
+    "suppressTaskName": true,
+    "tasks": [
+        {
+            "taskName": "build debug",
+            // Make this the default build command.
+            "isBuildCommand": true,
+            // Show the output window only if unrecognized errors occur.
+            "showOutput": "always",
+            "args": ["cmake -DCMAKE_BUILD_TYPE=Debug -DDEBUG_MODE=ON .. && make"],
+            // Use the standard less compilation problem matcher.
+            "problemMatcher": {
+                "owner": "cpp",
+                "fileLocation": ["relative", "${workspaceRoot}"],
+                "pattern": {
+                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "message": 5
+                }
+            }
+        },
+        {
+            "taskName": "build release",
+            // Make this the default build command.
+            "isBuildCommand": false,
+            // Show the output window only if unrecognized errors occur.
+            "showOutput": "always",
+            "args": ["make"],
+            // Use the standard less compilation problem matcher.
+            "problemMatcher": {
+                "owner": "cpp",
+                "fileLocation": ["relative", "${workspaceRoot}"],
+                "pattern": {
+                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "message": 5
+                }
+            }
+        },
+        {
+            "taskName": "clean",
+            "showOutput": "always",
+            "args": ["make clean"]
+        },
+        {
+            "taskName": "run",
+            "showOutput": "always",
+            "args": ["./bin/OpenMon"]
+        }
+    ]
+}
