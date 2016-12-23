@@ -38,8 +38,7 @@ bool AppDelegate::applicationDidFinishLaunching()
 {
     OpenMonData::DAL dataLayer;
     const std::string sql_statement = "SELECT * FROM pokemon LIMIT 5";
-    std::vector<std::map<std::string, std::string>> results = dataLayer.QueryToMapVector(sql_statement);
-    std::map<std::string, std::string> first = results.front();
+    std::vector<std::map<std::string, OpenMonData::DynamicType>> results = dataLayer.QueryToMapVector(sql_statement);
     
     // initialize director
     auto director = Director::getInstance();
