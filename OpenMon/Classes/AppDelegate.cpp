@@ -1,5 +1,6 @@
 #include "AppDelegate.h"
 #include "Scenes/HelloWorldScene.h"
+#include "DBMS/dal.hpp"
 
 USING_NS_CC;
 
@@ -33,7 +34,13 @@ static int register_all_packages()
     return 0; //flag for packages manager
 }
 
-bool AppDelegate::applicationDidFinishLaunching() {
+bool AppDelegate::applicationDidFinishLaunching() 
+{
+    OpenMonData::DAL dataLayer;
+    const std::string sql_statement = "SELECT * FROM pokemon LIMIT 5";
+    std::vector<std::map<std::string, std::string>> results = dataLayer.QueryToMapVector(sql_statement);
+    std::map<std::string, std::string> first = results.front();
+    
     // initialize director
     auto director = Director::getInstance();
     auto glview = director->getOpenGLView();

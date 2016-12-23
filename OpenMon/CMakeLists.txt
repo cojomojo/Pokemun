@@ -117,18 +117,20 @@ include_directories(
 )
 if ( WIN32 )
   include_directories(
-  ${COCOS2D_ROOT}/external/glfw3/include/win32
-  ${COCOS2D_ROOT}/external/win32-specific/gles/include/OGLES
-)
+    ${COCOS2D_ROOT}/external/glfw3/include/win32
+    ${COCOS2D_ROOT}/external/win32-specific/gles/include/OGLES
+  )
 endif( WIN32 )
 
 file(GLOB_RECURSE GAME_SRC
+  "Classes/*.c"
   "Classes/*.cpp"
   ${PLATFORM_SPECIFIC_SRC}
 )
 
 file(GLOB_RECURSE GAME_HEADERS
   "Classes/*.h"
+  "classes/*.hpp"
   ${PLATFORM_SPECIFIC_HEADERS}
 )
 
@@ -141,7 +143,7 @@ else()
     add_executable(${APP_NAME} ${GAME_SRC} ${GAME_HEADERS})
 endif()
 
-target_link_libraries(${APP_NAME} cocos2d)
+target_link_libraries(${APP_NAME} cocos2d -ldl)
 
 set(APP_BIN_DIR "${CMAKE_BINARY_DIR}/bin")
 
@@ -154,14 +156,14 @@ if ( WIN32 )
     COMMAND ${CMAKE_COMMAND} -E remove_directory ${APP_BIN_DIR}/Resources
     COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_CURRENT_SOURCE_DIR}/Resources ${APP_BIN_DIR}/Resources
     COMMAND ${CMAKE_COMMAND} -E copy ${COCOS2D_ROOT}/external/win32-specific/gles/prebuilt/glew32.dll ${APP_BIN_DIR}/${CMAKE_BUILD_TYPE}
-	COMMAND ${CMAKE_COMMAND} -E copy ${COCOS2D_ROOT}/external/win32-specific/zlib/prebuilt/zlib1.dll ${APP_BIN_DIR}/${CMAKE_BUILD_TYPE}
-	)
+    COMMAND ${CMAKE_COMMAND} -E copy ${COCOS2D_ROOT}/external/win32-specific/zlib/prebuilt/zlib1.dll ${APP_BIN_DIR}/${CMAKE_BUILD_TYPE}
+  )
 elseif( ANDROID )
 
 else()
   pre_build(${APP_NAME}
     COMMAND ${CMAKE_COMMAND} -E remove_directory ${APP_BIN_DIR}/Resources
     COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_CURRENT_SOURCE_DIR}/Resources ${APP_BIN_DIR}/Resources
-    )
+  )
 
 endif()
