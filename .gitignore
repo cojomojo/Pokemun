@@ -113,3 +113,8 @@ proj.win32/Release.*/
 *cmake_install.cmake
 *Makefile
 lib/
+
+# other
+GPATH
+GRTAGS
+GTAGS 
