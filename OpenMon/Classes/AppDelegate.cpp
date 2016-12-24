@@ -2,7 +2,7 @@
 #include "Scenes/HelloWorldScene.h"
 #include "DBMS/dal.hpp"
 
-USING_NS_CC;
+using namespace cocos2d;
 
 static cocos2d::Size designResolutionSize = cocos2d::Size(480, 320);
 static cocos2d::Size smallResolutionSize = cocos2d::Size(480, 320);
@@ -36,9 +36,16 @@ static int register_all_packages()
 
 bool AppDelegate::applicationDidFinishLaunching() 
 {
+    // Begin DAL Examples
     OpenMonData::DAL dataLayer;
-    const std::string sql_statement = "SELECT * FROM pokemon LIMIT 5";
-    std::vector<std::map<std::string, OpenMonData::DynamicType>> results = dataLayer.QueryToMapVector(sql_statement);
+    dataLayer.OpenConnection();
+  
+    const std::string sql_statement = "SELECT * FROM pokemon LIMIT 2";
+    OpenMonData::SqlResultList results = dataLayer.QueryToMapVector(sql_statement);
+    auto id =  SqlValueToType(std::string, results.front().at("id"))->GetValue();
+
+    dataLayer.CloseConnection();
+    // End DAL Examples
     
     // initialize director
     auto director = Director::getInstance();
