@@ -15,13 +15,13 @@ namespace OpenMonData
     typedef std::map<std::string, std::shared_ptr<SqlValue>> SqlResult;
     typedef std::vector<SqlResult> SqlResultList;
     
-    class DAL 
+    class DataAccess 
     {
     public:
-        DAL();
+        DataAccess();
 
         // Destructor - Will destroy the sqlite3 connection to the OpenMon database.
-        ~DAL();
+        ~DataAccess();
 
         // Will create a sqlite3 connection to the OpenMon database.
         void OpenConnection();
@@ -42,11 +42,11 @@ namespace OpenMonData
         int ExecuteNonQuery(std::string str_stmt);
     private:
         bool open_;
-        sqlite3 *_pDB;
+        sqlite3 *pDB_;
     };
 
 
-    class DbmsException: public std::exception
+    class DataAccessException: public std::exception
     {
     public:
         /** Constructor (C strings).
@@ -55,19 +55,19 @@ namespace OpenMonData
         *                 Hence, responsibility for deleting the char* lies
         *                 with the caller. 
         */
-        explicit DbmsException(const char* message):
+        explicit DataAccessException(const char* message):
             msg_(message) {}
 
         /** Constructor (C++ STL strings).
         *  @param message The error message.
         */
-        explicit DbmsException(const std::string& message)
+        explicit DataAccessException(const std::string& message)
             : msg_(message) {}
 
         /** Destructor.
         * Virtual to allow for subclassing.
         */
-        virtual ~DbmsException() throw (){}
+        virtual ~DataAccessException() throw (){}
 
         /** Returns a pointer to the (constant) error description.
         *  @return A pointer to a const char*. The underlying memory

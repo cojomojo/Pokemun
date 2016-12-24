@@ -1,5 +1,5 @@
 #include <sstream>
-#include "dal.hpp"
+#include "DataAccess.hpp"
 
 #define SharedPtrTypedSqlValue(type, name, value) (std::make_shared<TypedSqlValue<type>>(TypedSqlValue<type>(name, value)))
 #define StdPairSqlValue(key, value) (std::pair< std::string, std::shared_ptr<SqlValue> >(key, value))
@@ -7,15 +7,15 @@
 using namespace cocos2d;
 using namespace OpenMonData;
 
-DAL::DAL() 
+DataAccess::DataAccess() 
     : open_(false) {}
 
-DAL::~DAL() 
+DataAccess::~DataAccess() 
 {
     CloseConnection();
 }   
 
-void DAL::OpenConnection()
+void DataAccess::OpenConnection()
 {
     const std::string db_name = "data/openmon.sqlite";
     FileUtils *fileUtils = FileUtils::getInstance();
@@ -24,52 +24,52 @@ void DAL::OpenConnection()
     // Try and open a connection using the database file included.
     if (fileUtils->isFileExist(db_path)) 
     {
-        int rc = sqlite3_open(db_path.c_str(), &_pDB);
+        int rc = sqlite3_open(db_path.c_str(), &pDB_);
         if (rc != SQLITE_OK) {
             std::ostringstream oss;
-            oss << "Error opening database file. sqlite3_open returned code: " << "; message: "  << sqlite3_errmsg(_pDB);
+            oss << "Error opening database file. sqlite3_open returned code: " << "; message: "  << sqlite3_errmsg(pDB_);
             // CCLOG(oss.str().c_str());
-            throw DbmsException(oss.str());
+            throw DataAccessException(oss.str());
         }
     } else {
-        throw DbmsException("Database file not found!");
+        throw DataAccessException("Database file not found!");
     }
 
     open_ = true;
 }
 
-void DAL::CloseConnection()
+void DataAccess::CloseConnection()
 {
     if (!open_)
         return;
 
-    int rc = sqlite3_close(_pDB);
+    int rc = sqlite3_close(pDB_);
     if (rc != SQLITE_OK) {
         std::ostringstream oss;
-        oss << "Error closing database. sqlite3_open returned code: " << "; message: "  << sqlite3_errmsg(_pDB);
+        oss << "Error closing database. sqlite3_open returned code: " << "; message: "  << sqlite3_errmsg(pDB_);
         // CCLOG(oss.str().c_str());
-        throw DbmsException(oss.str());
+        throw DataAccessException(oss.str());
     }
         
     open_ = false;
 }
 
-SqlResultList DAL::QueryToMapVector(std::string str_stmt) 
+SqlResultList DataAccess::QueryToMapVector(std::string str_stmt) 
 {
     // First, make sure we have an open connection.
     if (!open_) {
-        throw DbmsException("A connection must be open before querying.");
+        throw DataAccessException("A connection must be open before querying.");
     }
 
     int rc; // return code
     sqlite3_stmt *stmt; // compiled sql statment
 
-    rc = sqlite3_prepare_v2(_pDB, str_stmt.c_str(), -1, &stmt, NULL);
+    rc = sqlite3_prepare_v2(pDB_, str_stmt.c_str(), -1, &stmt, NULL);
     if (rc != SQLITE_OK) {
         std::ostringstream oss;
-        oss << "Error preparing SQL statement. sqlite3_open returned code: " << "; message: "  << sqlite3_errmsg(_pDB);
+        oss << "Error preparing SQL statement. sqlite3_open returned code: " << "; message: "  << sqlite3_errmsg(pDB_);
         // CCLOG(oss.str().c_str());
-        throw DbmsException(oss.str());
+        throw DataAccessException(oss.str());
     }
 
     // execute the sql statement and go over results row by row
@@ -109,9 +109,9 @@ SqlResultList DAL::QueryToMapVector(std::string str_stmt)
 
     if (rc != SQLITE_OK) {
         std::ostringstream oss;
-        oss << "Error executing SQL statement. sqlite3_open returned code: " << "; message: "  << sqlite3_errmsg(_pDB);
+        oss << "Error executing SQL statement. sqlite3_open returned code: " << "; message: "  << sqlite3_errmsg(pDB_);
         // CCLOG(oss.str().c_str());
-        throw DbmsException(oss.str());
+        throw DataAccessException(oss.str());
     }
 
     return result;

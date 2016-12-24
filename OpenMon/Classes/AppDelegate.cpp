@@ -1,6 +1,6 @@
 #include "AppDelegate.h"
 #include "Scenes/HelloWorldScene.h"
-#include "DBMS/dal.hpp"
+#include "DBMS/DataAccess.hpp"
 
 using namespace cocos2d;
 
@@ -36,17 +36,17 @@ static int register_all_packages()
 
 bool AppDelegate::applicationDidFinishLaunching() 
 {
-    // Begin DAL Examples
-    OpenMonData::DAL dataLayer;
-    dataLayer.OpenConnection();
+    // Begin DataAccess Examples
+    OpenMonData::DataAccess db;
+    db.OpenConnection();
   
     const std::string sql_statement = "SELECT * FROM pokemon LIMIT 2";
-    OpenMonData::SqlResultList results = dataLayer.QueryToMapVector(sql_statement);
+    OpenMonData::SqlResultList results = db.QueryToMapVector(sql_statement);
     auto id =  SqlValueToType(int, results.front().at("id"))->GetValue();
     auto identifier = SqlValueToType(std::string, results.front().at("identifier"))->GetValue();
 
-    dataLayer.CloseConnection();
-    // End DAL Examples
+    db.CloseConnection();
+    // End DataAccess Examples
     
     // initialize director
     auto director = Director::getInstance();
