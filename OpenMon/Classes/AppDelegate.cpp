@@ -42,7 +42,8 @@ bool AppDelegate::applicationDidFinishLaunching()
   
     const std::string sql_statement = "SELECT * FROM pokemon LIMIT 2";
     OpenMonData::SqlResultList results = dataLayer.QueryToMapVector(sql_statement);
-    auto id =  SqlValueToType(std::string, results.front().at("id"))->GetValue();
+    auto id =  SqlValueToType(int, results.front().at("id"))->GetValue();
+    auto identifier = SqlValueToType(std::string, results.front().at("identifier"))->GetValue();
 
     dataLayer.CloseConnection();
     // End DAL Examples
