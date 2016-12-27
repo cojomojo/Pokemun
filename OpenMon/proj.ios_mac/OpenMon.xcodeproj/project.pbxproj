@@ -11,22 +11,6 @@
 		1AC6FB30180E99EB004C840B /* libcocos2d iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FB07180E9839004C840B /* libcocos2d iOS.a */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
-		276E90F51E0C8D1A0040E5E5 /* GameState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 276E90E51E0C8D1A0040E5E5 /* GameState.cpp */; };
-		276E90F61E0C8D1A0040E5E5 /* GameState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 276E90E51E0C8D1A0040E5E5 /* GameState.cpp */; };
-		276E90F71E0C8D1A0040E5E5 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 276E90E81E0C8D1A0040E5E5 /* .gitkeep */; };
-		276E90F81E0C8D1A0040E5E5 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 276E90E81E0C8D1A0040E5E5 /* .gitkeep */; };
-		276E90F91E0C8D1A0040E5E5 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 276E90EA1E0C8D1A0040E5E5 /* .gitkeep */; };
-		276E90FA1E0C8D1A0040E5E5 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 276E90EA1E0C8D1A0040E5E5 /* .gitkeep */; };
-		276E90FB1E0C8D1A0040E5E5 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 276E90EC1E0C8D1A0040E5E5 /* .gitkeep */; };
-		276E90FC1E0C8D1A0040E5E5 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 276E90EC1E0C8D1A0040E5E5 /* .gitkeep */; };
-		276E90FD1E0C8D1A0040E5E5 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 276E90EE1E0C8D1A0040E5E5 /* .gitkeep */; };
-		276E90FE1E0C8D1A0040E5E5 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 276E90EE1E0C8D1A0040E5E5 /* .gitkeep */; };
-		276E90FF1E0C8D1A0040E5E5 /* HelloWorldScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 276E90EF1E0C8D1A0040E5E5 /* HelloWorldScene.cpp */; };
-		276E91001E0C8D1A0040E5E5 /* HelloWorldScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 276E90EF1E0C8D1A0040E5E5 /* HelloWorldScene.cpp */; };
-		276E91011E0C8D1A0040E5E5 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 276E90F21E0C8D1A0040E5E5 /* .gitkeep */; };
-		276E91021E0C8D1A0040E5E5 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 276E90F21E0C8D1A0040E5E5 /* .gitkeep */; };
-		276E91031E0C8D1A0040E5E5 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 276E90F41E0C8D1A0040E5E5 /* .gitkeep */; };
-		276E91041E0C8D1A0040E5E5 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 276E90F41E0C8D1A0040E5E5 /* .gitkeep */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		294D0D641D0D56D500F7F5D4 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 294D0D631D0D56D500F7F5D4 /* CoreText.framework */; };
 		3EACC98F19EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
@@ -74,6 +58,28 @@
 		521A8EA919F11F5000D177D7 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 521A8EA819F11F5000D177D7 /* fonts */; };
 		521A8EAA19F11F5000D177D7 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 521A8EA819F11F5000D177D7 /* fonts */; };
 		52B47A471A53D09C004E4C60 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B47A461A53D09B004E4C60 /* Security.framework */; };
+		630A07A51E11A31B0018A84F /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 630A07901E11A31B0018A84F /* .gitkeep */; };
+		630A07A61E11A31B0018A84F /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 630A07901E11A31B0018A84F /* .gitkeep */; };
+		630A07A71E11A31B0018A84F /* DataAccess.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 630A07911E11A31B0018A84F /* DataAccess.cpp */; };
+		630A07A81E11A31B0018A84F /* DataAccess.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 630A07911E11A31B0018A84F /* DataAccess.cpp */; };
+		630A07A91E11A31C0018A84F /* MonLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 630A07931E11A31B0018A84F /* MonLoader.cpp */; };
+		630A07AA1E11A31C0018A84F /* MonLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 630A07931E11A31B0018A84F /* MonLoader.cpp */; };
+		630A07AB1E11A31C0018A84F /* sqlite3.c in Sources */ = {isa = PBXBuildFile; fileRef = 630A07961E11A31B0018A84F /* sqlite3.c */; };
+		630A07AC1E11A31C0018A84F /* sqlite3.c in Sources */ = {isa = PBXBuildFile; fileRef = 630A07961E11A31B0018A84F /* sqlite3.c */; };
+		630A07AD1E11A31C0018A84F /* GameState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 630A079B1E11A31B0018A84F /* GameState.cpp */; };
+		630A07AE1E11A31C0018A84F /* GameState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 630A079B1E11A31B0018A84F /* GameState.cpp */; };
+		630A07AF1E11A31C0018A84F /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 630A079E1E11A31B0018A84F /* .gitkeep */; };
+		630A07B01E11A31C0018A84F /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 630A079E1E11A31B0018A84F /* .gitkeep */; };
+		630A07B11E11A31C0018A84F /* HelloWorldScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 630A079F1E11A31B0018A84F /* HelloWorldScene.cpp */; };
+		630A07B21E11A31C0018A84F /* HelloWorldScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 630A079F1E11A31B0018A84F /* HelloWorldScene.cpp */; };
+		630A07B31E11A31C0018A84F /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 630A07A21E11A31B0018A84F /* .gitkeep */; };
+		630A07B41E11A31C0018A84F /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 630A07A21E11A31B0018A84F /* .gitkeep */; };
+		630A07B51E11A31C0018A84F /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 630A07A41E11A31B0018A84F /* .gitkeep */; };
+		630A07B61E11A31C0018A84F /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 630A07A41E11A31B0018A84F /* .gitkeep */; };
+		630A07BA1E11A3EF0018A84F /* openmon.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 630A07B81E11A3EF0018A84F /* openmon.sqlite */; };
+		630A07BB1E11A3EF0018A84F /* openmon.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 630A07B81E11A3EF0018A84F /* openmon.sqlite */; };
+		630A07BC1E11A3EF0018A84F /* pokemon.csv in Resources */ = {isa = PBXBuildFile; fileRef = 630A07B91E11A3EF0018A84F /* pokemon.csv */; };
+		630A07BD1E11A3EF0018A84F /* pokemon.csv in Resources */ = {isa = PBXBuildFile; fileRef = 630A07B91E11A3EF0018A84F /* pokemon.csv */; };
 		8262943E1AAF051F00CB7CF7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8262943D1AAF051F00CB7CF7 /* Security.framework */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
@@ -130,17 +136,6 @@
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D6058910D05DD3D006BFB54 /* OpenMon-mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OpenMon-mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		276E90E41E0C8D1A0040E5E5 /* GameConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameConfiguration.h; sourceTree = "<group>"; };
-		276E90E51E0C8D1A0040E5E5 /* GameState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameState.cpp; sourceTree = "<group>"; };
-		276E90E61E0C8D1A0040E5E5 /* GameState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameState.h; sourceTree = "<group>"; };
-		276E90E81E0C8D1A0040E5E5 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		276E90EA1E0C8D1A0040E5E5 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		276E90EC1E0C8D1A0040E5E5 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		276E90EE1E0C8D1A0040E5E5 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		276E90EF1E0C8D1A0040E5E5 /* HelloWorldScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelloWorldScene.cpp; sourceTree = "<group>"; };
-		276E90F01E0C8D1A0040E5E5 /* HelloWorldScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelloWorldScene.h; sourceTree = "<group>"; };
-		276E90F21E0C8D1A0040E5E5 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		276E90F41E0C8D1A0040E5E5 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		294D0D631D0D56D500F7F5D4 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
 		3EACC98E19EE6D4300EB3C5E /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
@@ -185,6 +180,25 @@
 		521A8E6319F0C34300D177D7 /* Default-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-736h@3x.png"; sourceTree = "<group>"; };
 		521A8EA819F11F5000D177D7 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 		52B47A461A53D09B004E4C60 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		630A07901E11A31B0018A84F /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		630A07911E11A31B0018A84F /* DataAccess.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DataAccess.cpp; sourceTree = "<group>"; };
+		630A07921E11A31B0018A84F /* DataAccess.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DataAccess.hpp; sourceTree = "<group>"; };
+		630A07931E11A31B0018A84F /* MonLoader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MonLoader.cpp; sourceTree = "<group>"; };
+		630A07941E11A31B0018A84F /* MonLoader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MonLoader.hpp; sourceTree = "<group>"; };
+		630A07961E11A31B0018A84F /* sqlite3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sqlite3.c; sourceTree = "<group>"; };
+		630A07971E11A31B0018A84F /* sqlite3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqlite3.h; sourceTree = "<group>"; };
+		630A07981E11A31B0018A84F /* sqlite3ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqlite3ext.h; sourceTree = "<group>"; };
+		630A07991E11A31B0018A84F /* SqlValue.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SqlValue.hpp; sourceTree = "<group>"; };
+		630A079A1E11A31B0018A84F /* GameConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameConfiguration.h; sourceTree = "<group>"; };
+		630A079B1E11A31B0018A84F /* GameState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameState.cpp; sourceTree = "<group>"; };
+		630A079C1E11A31B0018A84F /* GameState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GameState.hpp; sourceTree = "<group>"; };
+		630A079E1E11A31B0018A84F /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		630A079F1E11A31B0018A84F /* HelloWorldScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelloWorldScene.cpp; sourceTree = "<group>"; };
+		630A07A01E11A31B0018A84F /* HelloWorldScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelloWorldScene.h; sourceTree = "<group>"; };
+		630A07A21E11A31B0018A84F /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		630A07A41E11A31B0018A84F /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		630A07B81E11A3EF0018A84F /* openmon.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = openmon.sqlite; sourceTree = "<group>"; };
+		630A07B91E11A3EF0018A84F /* pokemon.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pokemon.csv; sourceTree = "<group>"; };
 		8262943D1AAF051F00CB7CF7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -275,57 +289,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		276E90E71E0C8D1A0040E5E5 /* Persistence */ = {
-			isa = PBXGroup;
-			children = (
-				276E90E81E0C8D1A0040E5E5 /* .gitkeep */,
-			);
-			path = Persistence;
-			sourceTree = "<group>";
-		};
-		276E90E91E0C8D1A0040E5E5 /* ProtoBuf */ = {
-			isa = PBXGroup;
-			children = (
-				276E90EA1E0C8D1A0040E5E5 /* .gitkeep */,
-				276E90EB1E0C8D1A0040E5E5 /* Mon */,
-			);
-			path = ProtoBuf;
-			sourceTree = "<group>";
-		};
-		276E90EB1E0C8D1A0040E5E5 /* Mon */ = {
-			isa = PBXGroup;
-			children = (
-				276E90EC1E0C8D1A0040E5E5 /* .gitkeep */,
-			);
-			path = Mon;
-			sourceTree = "<group>";
-		};
-		276E90ED1E0C8D1A0040E5E5 /* Scenes */ = {
-			isa = PBXGroup;
-			children = (
-				276E90EE1E0C8D1A0040E5E5 /* .gitkeep */,
-				276E90EF1E0C8D1A0040E5E5 /* HelloWorldScene.cpp */,
-				276E90F01E0C8D1A0040E5E5 /* HelloWorldScene.h */,
-			);
-			path = Scenes;
-			sourceTree = "<group>";
-		};
-		276E90F11E0C8D1A0040E5E5 /* Sprites */ = {
-			isa = PBXGroup;
-			children = (
-				276E90F21E0C8D1A0040E5E5 /* .gitkeep */,
-			);
-			path = Sprites;
-			sourceTree = "<group>";
-		};
-		276E90F31E0C8D1A0040E5E5 /* UI_Elements */ = {
-			isa = PBXGroup;
-			children = (
-				276E90F41E0C8D1A0040E5E5 /* .gitkeep */,
-			);
-			path = UI_Elements;
-			sourceTree = "<group>";
-		};
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
@@ -370,6 +333,7 @@
 		46880B7519C43A67006E1F66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				630A07B71E11A3EF0018A84F /* data */,
 				521A8EA819F11F5000D177D7 /* fonts */,
 				3EACC98E19EE6D4300EB3C5E /* res */,
 				46880B7619C43A67006E1F66 /* CloseNormal.png */,
@@ -383,14 +347,13 @@
 		46880B8319C43A87006E1F66 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				276E90E41E0C8D1A0040E5E5 /* GameConfiguration.h */,
-				276E90E51E0C8D1A0040E5E5 /* GameState.cpp */,
-				276E90E61E0C8D1A0040E5E5 /* GameState.h */,
-				276E90E71E0C8D1A0040E5E5 /* Persistence */,
-				276E90E91E0C8D1A0040E5E5 /* ProtoBuf */,
-				276E90ED1E0C8D1A0040E5E5 /* Scenes */,
-				276E90F11E0C8D1A0040E5E5 /* Sprites */,
-				276E90F31E0C8D1A0040E5E5 /* UI_Elements */,
+				630A078F1E11A31B0018A84F /* DBMS */,
+				630A079A1E11A31B0018A84F /* GameConfiguration.h */,
+				630A079B1E11A31B0018A84F /* GameState.cpp */,
+				630A079C1E11A31B0018A84F /* GameState.hpp */,
+				630A079D1E11A31B0018A84F /* Scenes */,
+				630A07A11E11A31B0018A84F /* Sprites */,
+				630A07A31E11A31B0018A84F /* UI_Elements */,
 				46880B8419C43A87006E1F66 /* AppDelegate.cpp */,
 				46880B8519C43A87006E1F66 /* AppDelegate.h */,
 			);
@@ -444,6 +407,65 @@
 			name = Icons;
 			path = ios;
 			sourceTree = SOURCE_ROOT;
+		};
+		630A078F1E11A31B0018A84F /* DBMS */ = {
+			isa = PBXGroup;
+			children = (
+				630A07901E11A31B0018A84F /* .gitkeep */,
+				630A07911E11A31B0018A84F /* DataAccess.cpp */,
+				630A07921E11A31B0018A84F /* DataAccess.hpp */,
+				630A07931E11A31B0018A84F /* MonLoader.cpp */,
+				630A07941E11A31B0018A84F /* MonLoader.hpp */,
+				630A07951E11A31B0018A84F /* sqlite */,
+				630A07991E11A31B0018A84F /* SqlValue.hpp */,
+			);
+			path = DBMS;
+			sourceTree = "<group>";
+		};
+		630A07951E11A31B0018A84F /* sqlite */ = {
+			isa = PBXGroup;
+			children = (
+				630A07961E11A31B0018A84F /* sqlite3.c */,
+				630A07971E11A31B0018A84F /* sqlite3.h */,
+				630A07981E11A31B0018A84F /* sqlite3ext.h */,
+			);
+			path = sqlite;
+			sourceTree = "<group>";
+		};
+		630A079D1E11A31B0018A84F /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				630A079E1E11A31B0018A84F /* .gitkeep */,
+				630A079F1E11A31B0018A84F /* HelloWorldScene.cpp */,
+				630A07A01E11A31B0018A84F /* HelloWorldScene.h */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		630A07A11E11A31B0018A84F /* Sprites */ = {
+			isa = PBXGroup;
+			children = (
+				630A07A21E11A31B0018A84F /* .gitkeep */,
+			);
+			path = Sprites;
+			sourceTree = "<group>";
+		};
+		630A07A31E11A31B0018A84F /* UI_Elements */ = {
+			isa = PBXGroup;
+			children = (
+				630A07A41E11A31B0018A84F /* .gitkeep */,
+			);
+			path = UI_Elements;
+			sourceTree = "<group>";
+		};
+		630A07B71E11A3EF0018A84F /* data */ = {
+			isa = PBXGroup;
+			children = (
+				630A07B81E11A3EF0018A84F /* openmon.sqlite */,
+				630A07B91E11A3EF0018A84F /* pokemon.csv */,
+			);
+			path = data;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -547,11 +569,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				276E91031E0C8D1A0040E5E5 /* .gitkeep in Resources */,
 				5087E78117EB970100C73F5D /* Icon-120.png in Resources */,
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,
-				276E90F91E0C8D1A0040E5E5 /* .gitkeep in Resources */,
-				276E90FD1E0C8D1A0040E5E5 /* .gitkeep in Resources */,
+				630A07BA1E11A3EF0018A84F /* openmon.sqlite in Resources */,
+				630A07AF1E11A31C0018A84F /* .gitkeep in Resources */,
+				630A07B51E11A31C0018A84F /* .gitkeep in Resources */,
 				5087E77F17EB970100C73F5D /* Default@2x.png in Resources */,
 				50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */,
 				5087E78317EB970100C73F5D /* Icon-152.png in Resources */,
@@ -561,21 +583,21 @@
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,
 				521A8E6519F0C34300D177D7 /* Default-736h@3x.png in Resources */,
 				521A8EA919F11F5000D177D7 /* fonts in Resources */,
+				630A07BC1E11A3EF0018A84F /* pokemon.csv in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
 				50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */,
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
-				276E90F71E0C8D1A0040E5E5 /* .gitkeep in Resources */,
+				630A07A51E11A31B0018A84F /* .gitkeep in Resources */,
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
 				3EACC98F19EE6D4300EB3C5E /* res in Resources */,
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
-				276E90FB1E0C8D1A0040E5E5 /* .gitkeep in Resources */,
+				630A07B31E11A31C0018A84F /* .gitkeep in Resources */,
 				5087E77E17EB970100C73F5D /* Default.png in Resources */,
 				521A8E6419F0C34300D177D7 /* Default-667h@2x.png in Resources */,
 				46880B7B19C43A67006E1F66 /* CloseNormal.png in Resources */,
 				50EF629717ECD46A001EB2F8 /* Icon-58.png in Resources */,
-				276E91011E0C8D1A0040E5E5 /* .gitkeep in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -585,16 +607,16 @@
 			files = (
 				46880B8219C43A67006E1F66 /* HelloWorld.png in Resources */,
 				503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */,
-				276E91021E0C8D1A0040E5E5 /* .gitkeep in Resources */,
-				276E91041E0C8D1A0040E5E5 /* .gitkeep in Resources */,
 				3EACC99019EE6D4300EB3C5E /* res in Resources */,
-				276E90FC1E0C8D1A0040E5E5 /* .gitkeep in Resources */,
+				630A07B41E11A31C0018A84F /* .gitkeep in Resources */,
 				521A8EAA19F11F5000D177D7 /* fonts in Resources */,
 				46880B7C19C43A67006E1F66 /* CloseNormal.png in Resources */,
 				46880B7E19C43A67006E1F66 /* CloseSelected.png in Resources */,
-				276E90FE1E0C8D1A0040E5E5 /* .gitkeep in Resources */,
-				276E90F81E0C8D1A0040E5E5 /* .gitkeep in Resources */,
-				276E90FA1E0C8D1A0040E5E5 /* .gitkeep in Resources */,
+				630A07B61E11A31C0018A84F /* .gitkeep in Resources */,
+				630A07BB1E11A3EF0018A84F /* openmon.sqlite in Resources */,
+				630A07A61E11A31B0018A84F /* .gitkeep in Resources */,
+				630A07BD1E11A3EF0018A84F /* pokemon.csv in Resources */,
+				630A07B01E11A31C0018A84F /* .gitkeep in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -606,11 +628,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
-				276E90F51E0C8D1A0040E5E5 /* GameState.cpp in Sources */,
-				276E90FF1E0C8D1A0040E5E5 /* HelloWorldScene.cpp in Sources */,
+				630A07AD1E11A31C0018A84F /* GameState.cpp in Sources */,
+				630A07B11E11A31C0018A84F /* HelloWorldScene.cpp in Sources */,
+				630A07A71E11A31B0018A84F /* DataAccess.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
+				630A07AB1E11A31C0018A84F /* sqlite3.c in Sources */,
+				630A07A91E11A31C0018A84F /* MonLoader.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -619,9 +644,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				46880B8919C43A87006E1F66 /* AppDelegate.cpp in Sources */,
-				276E90F61E0C8D1A0040E5E5 /* GameState.cpp in Sources */,
-				276E91001E0C8D1A0040E5E5 /* HelloWorldScene.cpp in Sources */,
+				630A07AE1E11A31C0018A84F /* GameState.cpp in Sources */,
+				630A07B21E11A31C0018A84F /* HelloWorldScene.cpp in Sources */,
+				630A07A81E11A31B0018A84F /* DataAccess.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
+				630A07AA1E11A31C0018A84F /* MonLoader.cpp in Sources */,
+				630A07AC1E11A31C0018A84F /* sqlite3.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
