@@ -2,6 +2,7 @@
 #define mon_hpp
 
 #include "types.hpp"
+#include "StatusConditions.hpp"
 #include<string>
 #include<vector>
 using std::string;
@@ -10,7 +11,9 @@ using std::vector;
 
 class Mon {
 public:
-    Mon(string name, int lvl, int b_hp, int b_atk, int b_def, int b_spcl_atk, int b_spcl_def, int b_speed, Type type_1, Type type_2);
+    Mon(string name, int lvl, int b_hp, int b_atk, int b_def,
+        int b_spcl_atk, int b_spcl_def, int b_speed,
+        Type type_1, Type type_2);
     
     int GetCurrentHp();
     void SetCurrentHp(int value);
@@ -22,8 +25,8 @@ public:
     bool IsConfused();
     void SetFainted(bool faint);
     string GetName();
-    //Status GetStatusCondition();
-    void SwapMonReset();
+    Status GetStatusCondition();
+    void ResetStatsToDefault();
     
 private:
     int ScaleHp(int bsv_hp_value);
@@ -64,7 +67,7 @@ private:
     // Status flags
     bool confused;
     bool fainted;
-    //Status status_cond;
+    Status status_cond;
     
     // TODO figure out how to do weaknesses based on type(s) issue will be for edge cases where one type for the mon is weak to
     // some type but the other resists it (think a fire and ground type Mon being neutral to ice moves)

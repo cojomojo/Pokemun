@@ -1,6 +1,9 @@
 #include "mon.hpp"
 
-Mon::Mon(string name, int lvl, int b_hp, int b_atk, int b_def, int b_spcl_atk, int b_spcl_def, int b_speed, Type type_1, Type type_2) {
+Mon::Mon(string name, int lvl, int b_hp, int b_atk, int b_def,
+         int b_spcl_atk, int b_spcl_def, int b_speed,
+         Type type_1, Type type_2) {
+    
     name = mon_name;
     max_hp = ScaleHp(b_hp);
     level = lvl;
@@ -20,7 +23,7 @@ Mon::Mon(string name, int lvl, int b_hp, int b_atk, int b_def, int b_spcl_atk, i
     primary_type = type_1;
     secondary_type = type_2;
     current_hp = max_hp;
-    //status_cond = none;
+    status_cond = no_condition;
     confused = false;
     fainted = false;
 }
@@ -77,13 +80,13 @@ string Mon::GetName() {
     return mon_name;
 }
 
-//status Mon::GetStatusCondition() {
-//    return status_cond;
-//}
+Status Mon::GetStatusCondition() {
+    return status_cond;
+}
 
 // When you swap the active mon, confusion is removed
 // and current stat values are reset to their base values
-void Mon::SwapMonReset() {
+void Mon::ResetStatsToDefault() {
     confused = false;
     current_attack = base_attack;
     current_defense = base_defense;
