@@ -18,7 +18,7 @@ Move::Move(string name, Type type, int acc, int pwr, int pp,
 
 // returns boolean based on if the move has any pp left
 bool Move::IsPPEmpty() {
-    return current_pp > 0;
+    return current_pp <= 0;
 }
 
 int Move::GetPP(){
