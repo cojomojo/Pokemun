@@ -8,7 +8,13 @@
 #include <memory>
 #include "SqlValue.hpp"
 #include "cocos2d.h"
+
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_WINRT)
+#include "sqlite3.h"
+#else
 #include "sqlite/sqlite3.h"
+#endif
+
 
 namespace OpenMonData 
 {

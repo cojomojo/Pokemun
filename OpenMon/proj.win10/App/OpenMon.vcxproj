@@ -219,7 +219,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Classes\AppDelegate.h" />
-    <ClInclude Include="..\..\Classes\HelloWorldScene.h" />
+    <ClInclude Include="..\..\Classes\DBMS\DataAccess.hpp" />
+    <ClInclude Include="..\..\Classes\DBMS\MonLoader.hpp" />
+    <ClInclude Include="..\..\Classes\DBMS\SqlValue.hpp" />
+    <ClInclude Include="..\..\Classes\GameConfiguration.h" />
+    <ClInclude Include="..\..\Classes\GameState.hpp" />
+    <ClInclude Include="..\..\Classes\mon.hpp" />
+    <ClInclude Include="..\..\Classes\Move.hpp" />
+    <ClInclude Include="..\..\Classes\Scenes\HelloWorldScene.h" />
+    <ClInclude Include="..\..\Classes\StatusConditions.hpp" />
+    <ClInclude Include="..\..\Classes\types.hpp" />
     <ClInclude Include="App.xaml.h">
       <DependentUpon>App.xaml</DependentUpon>
     </ClInclude>
@@ -243,7 +252,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Classes\AppDelegate.cpp" />
-    <ClCompile Include="..\..\Classes\HelloWorldScene.cpp" />
+    <ClCompile Include="..\..\Classes\DBMS\DataAccess.cpp" />
+    <ClCompile Include="..\..\Classes\DBMS\MonLoader.cpp" />
+    <ClCompile Include="..\..\Classes\GameState.cpp" />
+    <ClCompile Include="..\..\Classes\mon.cpp" />
+    <ClCompile Include="..\..\Classes\Move.cpp" />
+    <ClCompile Include="..\..\Classes\Scenes\HelloWorldScene.cpp" />
     <ClCompile Include="App.xaml.cpp">
       <DependentUpon>App.xaml</DependentUpon>
     </ClCompile>

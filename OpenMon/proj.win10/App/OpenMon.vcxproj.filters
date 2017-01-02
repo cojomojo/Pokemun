@@ -14,6 +14,21 @@
     <Filter Include="Classes">
       <UniqueIdentifier>{a18967bc-4fa1-4c67-bf7e-3f9c8b6a1129}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Classes\DBMS">
+      <UniqueIdentifier>{b59073b8-1b5c-44c0-ac45-6da5f2c2406b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\DBMS\sqlite">
+      <UniqueIdentifier>{a7d90034-dcfd-494a-9b52-171bae630c3b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Scenes">
+      <UniqueIdentifier>{30508f4a-c600-495f-aa4b-0eeb48b22610}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Sprites">
+      <UniqueIdentifier>{4c756177-e041-48cf-8a7e-9587b1122d40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\UI_Elements">
+      <UniqueIdentifier>{44a5f8af-8f73-4ba5-a983-7126e2e19027}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml" />
@@ -31,8 +46,23 @@
     <ClCompile Include="..\..\Classes\AppDelegate.cpp">
       <Filter>Classes</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Classes\HelloWorldScene.cpp">
+    <ClCompile Include="..\..\Classes\GameState.cpp">
       <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\mon.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\Move.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\DBMS\DataAccess.cpp">
+      <Filter>Classes\DBMS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\DBMS\MonLoader.cpp">
+      <Filter>Classes\DBMS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\Scenes\HelloWorldScene.cpp">
+      <Filter>Classes\UI_Elements</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -48,8 +78,35 @@
     <ClInclude Include="..\..\Classes\AppDelegate.h">
       <Filter>Classes</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Classes\HelloWorldScene.h">
+    <ClInclude Include="..\..\Classes\GameConfiguration.h">
       <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\GameState.hpp">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\mon.hpp">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\Move.hpp">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\StatusConditions.hpp">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\types.hpp">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\DBMS\SqlValue.hpp">
+      <Filter>Classes\DBMS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\DBMS\DataAccess.hpp">
+      <Filter>Classes\DBMS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\DBMS\MonLoader.hpp">
+      <Filter>Classes\DBMS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\Scenes\HelloWorldScene.h">
+      <Filter>Classes\UI_Elements</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

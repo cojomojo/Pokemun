@@ -17,7 +17,13 @@ DataAccess::~DataAccess()
 
 void DataAccess::OpenConnection()
 {
+
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_MAC)
     const std::string db_name = "openmon.sqlite";
+#else
+	const std::string db_name = "data/openmon.sqlite";
+#endif
+
     FileUtils *fileUtils = FileUtils::getInstance();
 
     const std::string db_path = fileUtils->fullPathForFilename(db_name);
@@ -27,7 +33,7 @@ void DataAccess::OpenConnection()
         int rc = sqlite3_open(db_path.c_str(), &pDB_);
         if (rc != SQLITE_OK) {
             std::ostringstream oss;
-            oss << "Error opening database file. sqlite3_open returned code: " << "; message: "  << sqlite3_errmsg(pDB_);
+            oss << "Error opening database file. sqlite3_open returned code: " << rc <<  "; message: "  << sqlite3_errmsg(pDB_);
             // CCLOG(oss.str().c_str());
             throw DataAccessException(oss.str());
         }
@@ -46,7 +52,7 @@ void DataAccess::CloseConnection()
     int rc = sqlite3_close(pDB_);
     if (rc != SQLITE_OK) {
         std::ostringstream oss;
-        oss << "Error closing database. sqlite3_open returned code: " << "; message: "  << sqlite3_errmsg(pDB_);
+        oss << "Error closing database. sqlite3_open returned code: " << rc <<  "; message: "  << sqlite3_errmsg(pDB_);
         // CCLOG(oss.str().c_str());
         throw DataAccessException(oss.str());
     }
@@ -67,7 +73,7 @@ SqlResultList DataAccess::QueryToMapVector(std::string str_stmt)
     rc = sqlite3_prepare_v2(pDB_, str_stmt.c_str(), -1, &stmt, NULL);
     if (rc != SQLITE_OK) {
         std::ostringstream oss;
-        oss << "Error preparing SQL statement. sqlite3_open returned code: " << "; message: "  << sqlite3_errmsg(pDB_);
+        oss << "Error preparing SQL statement. sqlite3_open returned code: " << rc <<  "; message: "  << sqlite3_errmsg(pDB_);
         // CCLOG(oss.str().c_str());
         throw DataAccessException(oss.str());
     }
@@ -107,12 +113,12 @@ SqlResultList DataAccess::QueryToMapVector(std::string str_stmt)
     // Destroy the statement, while preserving any error that occured in the last sqlite3_step().
     rc = sqlite3_finalize(stmt);
 
-    if (rc != SQLITE_OK) {
-        std::ostringstream oss;
-        oss << "Error executing SQL statement. sqlite3_open returned code: " << "; message: "  << sqlite3_errmsg(pDB_);
-        // CCLOG(oss.str().c_str());
-        throw DataAccessException(oss.str());
-    }
+	if (rc != SQLITE_OK) {
+		std::ostringstream oss;
+		oss << "Error finalizing SQL statement. sqlite3_finalize returned code: " << rc <<  "; message: " << sqlite3_errmsg(pDB_);
+		// CCLOG(oss.str().c_str());
+		throw DataAccessException(oss.str());
+	}
 
     return result;
 }
@@ -138,20 +144,31 @@ int DataAccess::ExecuteNonQuery(std::string str_stmt)
     rc = sqlite3_prepare_v2(pDB_, str_stmt.c_str(), -1, &stmt, NULL);
     if (rc != SQLITE_OK) {
         std::ostringstream oss;
-        oss << "Error preparing SQL statement. sqlite3_open returned code: " << "; message: "  << sqlite3_errmsg(pDB_);
+        oss << "Error preparing SQL statement. sqlite3_open returned code: " << rc <<  "; message: "  << sqlite3_errmsg(pDB_);
         // CCLOG(oss.str().c_str());
         throw DataAccessException(oss.str());
     }
     
     // Execute the sql statement.
-    while ((rc = sqlite3_step(stmt)) != SQLITE_ERROR && rc != SQLITE_DONE);
+	rc = sqlite3_step(stmt);
+	while (rc != SQLITE_DONE) {
+		if (rc == SQLITE_ERROR || rc == SQLITE_READONLY) {
+			// Destroy the statement, while preserving any error that occured in the last sqlite3_step().
+			rc = sqlite3_finalize(stmt);
+			std::ostringstream oss;
+			oss << "Error executing SQL statement. sqlite3_step returned code: " << rc <<  "; message: " << sqlite3_errmsg(pDB_);
+			throw DataAccessException(oss.str());
+			break;
+		} 
+		rc = sqlite3_step(stmt);
+	}
     
     // Destroy the statement, while preserving any error that occured in the last sqlite3_step().
     rc = sqlite3_finalize(stmt);
     
     if (rc != SQLITE_OK) {
         std::ostringstream oss;
-        oss << "Error executing SQL statement. sqlite3_open returned code: " << "; message: "  << sqlite3_errmsg(pDB_);
+        oss << "Error finalizing SQL statement. sqlite3_finalize returned code: " << rc <<  "; message: "  << sqlite3_errmsg(pDB_);
         // CCLOG(oss.str().c_str());
         throw DataAccessException(oss.str());
     }
