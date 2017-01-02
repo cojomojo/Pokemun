@@ -38,7 +38,7 @@ namespace OpenMonData
         // Runs a SQL query and returns the results in a vector filled with maps. Each map
         // represents a single row returned with the key being the column name, and the 
         // value being row value for that column.
-        SqlResultList QueryToMapVector(std::string str_stmt);
+        SqlResultList QueryToSqlResultList(std::string str_stmt);
 
         // Runs a SQL query and returns a single result which represents a single database row.
         SqlResult QueryToSqlResult(std::string str_stmt);

@@ -60,7 +60,7 @@ void DataAccess::CloseConnection()
     open_ = false;
 }
 
-SqlResultList DataAccess::QueryToMapVector(std::string str_stmt) 
+SqlResultList DataAccess::QueryToSqlResultList(std::string str_stmt) 
 {
     // First, make sure we have an open connection.
     if (!open_) {
@@ -126,7 +126,7 @@ SqlResultList DataAccess::QueryToMapVector(std::string str_stmt)
 // Runs a SQL query and returns a single result which represents a single database row.
 SqlResult DataAccess::QueryToSqlResult(std::string str_stmt)
 {
-    return QueryToMapVector(str_stmt).front();
+    return QueryToSqlResultList(str_stmt).front();
 }
 
 // Executes a SQL statment that does not return a result set. It returns the number of

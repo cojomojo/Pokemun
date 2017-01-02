@@ -2,8 +2,6 @@
 
 #include <string>
 
-#define SqlValueToType(type, obj) (static_pointer_cast<OpenMonData::TypedSqlValue<type>>(obj))
-
 namespace OpenMonData 
 {
     class SqlValue 
@@ -15,19 +13,27 @@ namespace OpenMonData
         virtual ~SqlValue() { }
 
         std::string const& GetType() const { return name_; };
+		
+    	template<typename T>
+		T GetValue()
+    	{
+			TypedSqlValue<T> *tsv = dynamic_cast<TypedSqlValue<T>*>(this);
+			return tsv->GetValue();
+    	}
     private:
         std::string name_;
     };
 
-    template< typename T > 
+    template<typename T> 
     class TypedSqlValue : public SqlValue
     {
     public:
         TypedSqlValue(const std::string& name, const T& data)
             : SqlValue(name), data_(data) { };
 
-        T const& GetValue() const { return data_; };
+		T const& GetValue() const { return data_; };
     private:
         T data_;
     };
 }
+
