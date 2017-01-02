@@ -4,6 +4,10 @@
 
 namespace OpenMonData 
 {
+    // forward declare TypedSqlValue
+    template<typename T> 
+    class TypedSqlValue;
+
     class SqlValue 
     {
     public:
