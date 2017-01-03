@@ -11,10 +11,22 @@
 		1AC6FB30180E99EB004C840B /* libcocos2d iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FB07180E9839004C840B /* libcocos2d iOS.a */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
-		27CE90EB1E1479C3003DC599 /* mon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27CE90E91E1479C3003DC599 /* mon.cpp */; };
-		27CE90EC1E1479C3003DC599 /* mon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27CE90E91E1479C3003DC599 /* mon.cpp */; };
-		27D4F9651E14EEAE0010D1F0 /* Move.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27D4F9631E14EEAE0010D1F0 /* Move.cpp */; };
-		27D4F9661E14EEAE0010D1F0 /* Move.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27D4F9631E14EEAE0010D1F0 /* Move.cpp */; };
+		27915F341E1B717F00EB9890 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 27915F2A1E1B717F00EB9890 /* .gitkeep */; };
+		27915F351E1B717F00EB9890 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 27915F2A1E1B717F00EB9890 /* .gitkeep */; };
+		27915F361E1B717F00EB9890 /* DataAccess.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27915F2B1E1B717F00EB9890 /* DataAccess.cpp */; };
+		27915F371E1B717F00EB9890 /* DataAccess.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27915F2B1E1B717F00EB9890 /* DataAccess.cpp */; };
+		27915F381E1B717F00EB9890 /* MonLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27915F2D1E1B717F00EB9890 /* MonLoader.cpp */; };
+		27915F391E1B717F00EB9890 /* MonLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27915F2D1E1B717F00EB9890 /* MonLoader.cpp */; };
+		27915F3A1E1B717F00EB9890 /* sqlite3.c in Sources */ = {isa = PBXBuildFile; fileRef = 27915F301E1B717F00EB9890 /* sqlite3.c */; };
+		27915F3B1E1B717F00EB9890 /* sqlite3.c in Sources */ = {isa = PBXBuildFile; fileRef = 27915F301E1B717F00EB9890 /* sqlite3.c */; };
+		27915F451E1B719A00EB9890 /* Mon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27915F3D1E1B719A00EB9890 /* Mon.cpp */; };
+		27915F461E1B719A00EB9890 /* Mon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27915F3D1E1B719A00EB9890 /* Mon.cpp */; };
+		27915F471E1B719A00EB9890 /* MonStatus.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27915F3F1E1B719A00EB9890 /* MonStatus.cpp */; };
+		27915F481E1B719A00EB9890 /* MonStatus.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27915F3F1E1B719A00EB9890 /* MonStatus.cpp */; };
+		27915F491E1B719A00EB9890 /* MonType.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27915F411E1B719A00EB9890 /* MonType.cpp */; };
+		27915F4A1E1B719A00EB9890 /* MonType.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27915F411E1B719A00EB9890 /* MonType.cpp */; };
+		27915F4B1E1B719A00EB9890 /* Move.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27915F431E1B719A00EB9890 /* Move.cpp */; };
+		27915F4C1E1B719A00EB9890 /* Move.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27915F431E1B719A00EB9890 /* Move.cpp */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		294D0D641D0D56D500F7F5D4 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 294D0D631D0D56D500F7F5D4 /* CoreText.framework */; };
 		3EACC98F19EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
@@ -62,14 +74,6 @@
 		521A8EA919F11F5000D177D7 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 521A8EA819F11F5000D177D7 /* fonts */; };
 		521A8EAA19F11F5000D177D7 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 521A8EA819F11F5000D177D7 /* fonts */; };
 		52B47A471A53D09C004E4C60 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B47A461A53D09B004E4C60 /* Security.framework */; };
-		630A07A51E11A31B0018A84F /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 630A07901E11A31B0018A84F /* .gitkeep */; };
-		630A07A61E11A31B0018A84F /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 630A07901E11A31B0018A84F /* .gitkeep */; };
-		630A07A71E11A31B0018A84F /* DataAccess.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 630A07911E11A31B0018A84F /* DataAccess.cpp */; };
-		630A07A81E11A31B0018A84F /* DataAccess.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 630A07911E11A31B0018A84F /* DataAccess.cpp */; };
-		630A07A91E11A31C0018A84F /* MonLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 630A07931E11A31B0018A84F /* MonLoader.cpp */; };
-		630A07AA1E11A31C0018A84F /* MonLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 630A07931E11A31B0018A84F /* MonLoader.cpp */; };
-		630A07AB1E11A31C0018A84F /* sqlite3.c in Sources */ = {isa = PBXBuildFile; fileRef = 630A07961E11A31B0018A84F /* sqlite3.c */; };
-		630A07AC1E11A31C0018A84F /* sqlite3.c in Sources */ = {isa = PBXBuildFile; fileRef = 630A07961E11A31B0018A84F /* sqlite3.c */; };
 		630A07AD1E11A31C0018A84F /* GameState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 630A079B1E11A31B0018A84F /* GameState.cpp */; };
 		630A07AE1E11A31C0018A84F /* GameState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 630A079B1E11A31B0018A84F /* GameState.cpp */; };
 		630A07AF1E11A31C0018A84F /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 630A079E1E11A31B0018A84F /* .gitkeep */; };
@@ -140,12 +144,23 @@
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D6058910D05DD3D006BFB54 /* OpenMon-mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OpenMon-mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		27CE90E91E1479C3003DC599 /* mon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mon.cpp; sourceTree = "<group>"; };
-		27CE90EA1E1479C3003DC599 /* mon.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = mon.hpp; sourceTree = "<group>"; };
-		27CE90EF1E147BDE003DC599 /* types.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = types.hpp; sourceTree = "<group>"; };
-		27D4F9631E14EEAE0010D1F0 /* Move.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Move.cpp; sourceTree = "<group>"; };
-		27D4F9641E14EEAE0010D1F0 /* Move.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Move.hpp; sourceTree = "<group>"; };
-		27D4F9671E14EF780010D1F0 /* StatusConditions.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = StatusConditions.hpp; sourceTree = "<group>"; };
+		27915F2A1E1B717F00EB9890 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		27915F2B1E1B717F00EB9890 /* DataAccess.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DataAccess.cpp; sourceTree = "<group>"; };
+		27915F2C1E1B717F00EB9890 /* DataAccess.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DataAccess.hpp; sourceTree = "<group>"; };
+		27915F2D1E1B717F00EB9890 /* MonLoader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MonLoader.cpp; sourceTree = "<group>"; };
+		27915F2E1E1B717F00EB9890 /* MonLoader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MonLoader.hpp; sourceTree = "<group>"; };
+		27915F301E1B717F00EB9890 /* sqlite3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sqlite3.c; sourceTree = "<group>"; };
+		27915F311E1B717F00EB9890 /* sqlite3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqlite3.h; sourceTree = "<group>"; };
+		27915F321E1B717F00EB9890 /* sqlite3ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqlite3ext.h; sourceTree = "<group>"; };
+		27915F331E1B717F00EB9890 /* SqlValue.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SqlValue.hpp; sourceTree = "<group>"; };
+		27915F3D1E1B719A00EB9890 /* Mon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Mon.cpp; sourceTree = "<group>"; };
+		27915F3E1E1B719A00EB9890 /* Mon.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Mon.hpp; sourceTree = "<group>"; };
+		27915F3F1E1B719A00EB9890 /* MonStatus.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MonStatus.cpp; sourceTree = "<group>"; };
+		27915F401E1B719A00EB9890 /* MonStatus.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MonStatus.hpp; sourceTree = "<group>"; };
+		27915F411E1B719A00EB9890 /* MonType.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MonType.cpp; sourceTree = "<group>"; };
+		27915F421E1B719A00EB9890 /* MonType.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MonType.hpp; sourceTree = "<group>"; };
+		27915F431E1B719A00EB9890 /* Move.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Move.cpp; sourceTree = "<group>"; };
+		27915F441E1B719A00EB9890 /* Move.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Move.hpp; sourceTree = "<group>"; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		294D0D631D0D56D500F7F5D4 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
 		3EACC98E19EE6D4300EB3C5E /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
@@ -190,15 +205,6 @@
 		521A8E6319F0C34300D177D7 /* Default-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-736h@3x.png"; sourceTree = "<group>"; };
 		521A8EA819F11F5000D177D7 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 		52B47A461A53D09B004E4C60 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
-		630A07901E11A31B0018A84F /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		630A07911E11A31B0018A84F /* DataAccess.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DataAccess.cpp; sourceTree = "<group>"; };
-		630A07921E11A31B0018A84F /* DataAccess.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DataAccess.hpp; sourceTree = "<group>"; };
-		630A07931E11A31B0018A84F /* MonLoader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MonLoader.cpp; sourceTree = "<group>"; };
-		630A07941E11A31B0018A84F /* MonLoader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MonLoader.hpp; sourceTree = "<group>"; };
-		630A07961E11A31B0018A84F /* sqlite3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sqlite3.c; sourceTree = "<group>"; };
-		630A07971E11A31B0018A84F /* sqlite3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqlite3.h; sourceTree = "<group>"; };
-		630A07981E11A31B0018A84F /* sqlite3ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqlite3ext.h; sourceTree = "<group>"; };
-		630A07991E11A31B0018A84F /* SqlValue.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SqlValue.hpp; sourceTree = "<group>"; };
 		630A079A1E11A31B0018A84F /* GameConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameConfiguration.h; sourceTree = "<group>"; };
 		630A079B1E11A31B0018A84F /* GameState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameState.cpp; sourceTree = "<group>"; };
 		630A079C1E11A31B0018A84F /* GameState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GameState.hpp; sourceTree = "<group>"; };
@@ -299,6 +305,46 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		27915F291E1B717F00EB9890 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				27915F2A1E1B717F00EB9890 /* .gitkeep */,
+				27915F2B1E1B717F00EB9890 /* DataAccess.cpp */,
+				27915F2C1E1B717F00EB9890 /* DataAccess.hpp */,
+				27915F2D1E1B717F00EB9890 /* MonLoader.cpp */,
+				27915F2E1E1B717F00EB9890 /* MonLoader.hpp */,
+				27915F2F1E1B717F00EB9890 /* sqlite */,
+				27915F331E1B717F00EB9890 /* SqlValue.hpp */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		27915F2F1E1B717F00EB9890 /* sqlite */ = {
+			isa = PBXGroup;
+			children = (
+				27915F301E1B717F00EB9890 /* sqlite3.c */,
+				27915F311E1B717F00EB9890 /* sqlite3.h */,
+				27915F321E1B717F00EB9890 /* sqlite3ext.h */,
+			);
+			path = sqlite;
+			sourceTree = "<group>";
+		};
+		27915F3C1E1B719A00EB9890 /* GameObjects */ = {
+			isa = PBXGroup;
+			children = (
+				27915F3D1E1B719A00EB9890 /* Mon.cpp */,
+				27915F3E1E1B719A00EB9890 /* Mon.hpp */,
+				27915F3F1E1B719A00EB9890 /* MonStatus.cpp */,
+				27915F401E1B719A00EB9890 /* MonStatus.hpp */,
+				27915F411E1B719A00EB9890 /* MonType.cpp */,
+				27915F421E1B719A00EB9890 /* MonType.hpp */,
+				27915F431E1B719A00EB9890 /* Move.cpp */,
+				27915F441E1B719A00EB9890 /* Move.hpp */,
+			);
+			name = GameObjects;
+			path = Data/GameObjects;
+			sourceTree = "<group>";
+		};
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
@@ -357,21 +403,16 @@
 		46880B8319C43A87006E1F66 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				630A078F1E11A31B0018A84F /* DBMS */,
-				630A079A1E11A31B0018A84F /* GameConfiguration.h */,
-				630A079B1E11A31B0018A84F /* GameState.cpp */,
-				630A079C1E11A31B0018A84F /* GameState.hpp */,
+				27915F291E1B717F00EB9890 /* Data */,
+				27915F3C1E1B719A00EB9890 /* GameObjects */,
 				630A079D1E11A31B0018A84F /* Scenes */,
 				630A07A11E11A31B0018A84F /* Sprites */,
 				630A07A31E11A31B0018A84F /* UI_Elements */,
 				46880B8419C43A87006E1F66 /* AppDelegate.cpp */,
 				46880B8519C43A87006E1F66 /* AppDelegate.h */,
-				27CE90E91E1479C3003DC599 /* mon.cpp */,
-				27CE90EA1E1479C3003DC599 /* mon.hpp */,
-				27D4F9631E14EEAE0010D1F0 /* Move.cpp */,
-				27D4F9641E14EEAE0010D1F0 /* Move.hpp */,
-				27CE90EF1E147BDE003DC599 /* types.hpp */,
-				27D4F9671E14EF780010D1F0 /* StatusConditions.hpp */,
+				630A079A1E11A31B0018A84F /* GameConfiguration.h */,
+				630A079B1E11A31B0018A84F /* GameState.cpp */,
+				630A079C1E11A31B0018A84F /* GameState.hpp */,
 			);
 			name = Classes;
 			path = ../Classes;
@@ -423,30 +464,6 @@
 			name = Icons;
 			path = ios;
 			sourceTree = SOURCE_ROOT;
-		};
-		630A078F1E11A31B0018A84F /* DBMS */ = {
-			isa = PBXGroup;
-			children = (
-				630A07901E11A31B0018A84F /* .gitkeep */,
-				630A07911E11A31B0018A84F /* DataAccess.cpp */,
-				630A07921E11A31B0018A84F /* DataAccess.hpp */,
-				630A07931E11A31B0018A84F /* MonLoader.cpp */,
-				630A07941E11A31B0018A84F /* MonLoader.hpp */,
-				630A07951E11A31B0018A84F /* sqlite */,
-				630A07991E11A31B0018A84F /* SqlValue.hpp */,
-			);
-			path = DBMS;
-			sourceTree = "<group>";
-		};
-		630A07951E11A31B0018A84F /* sqlite */ = {
-			isa = PBXGroup;
-			children = (
-				630A07961E11A31B0018A84F /* sqlite3.c */,
-				630A07971E11A31B0018A84F /* sqlite3.h */,
-				630A07981E11A31B0018A84F /* sqlite3ext.h */,
-			);
-			path = sqlite;
-			sourceTree = "<group>";
 		};
 		630A079D1E11A31B0018A84F /* Scenes */ = {
 			isa = PBXGroup;
@@ -585,6 +602,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27915F341E1B717F00EB9890 /* .gitkeep in Resources */,
 				5087E78117EB970100C73F5D /* Icon-120.png in Resources */,
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,
 				630A07BA1E11A3EF0018A84F /* openmon.sqlite in Resources */,
@@ -604,7 +622,6 @@
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
 				50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */,
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
-				630A07A51E11A31B0018A84F /* .gitkeep in Resources */,
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
 				3EACC98F19EE6D4300EB3C5E /* res in Resources */,
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,
@@ -624,13 +641,13 @@
 				46880B8219C43A67006E1F66 /* HelloWorld.png in Resources */,
 				503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */,
 				3EACC99019EE6D4300EB3C5E /* res in Resources */,
+				27915F351E1B717F00EB9890 /* .gitkeep in Resources */,
 				630A07B41E11A31C0018A84F /* .gitkeep in Resources */,
 				521A8EAA19F11F5000D177D7 /* fonts in Resources */,
 				46880B7C19C43A67006E1F66 /* CloseNormal.png in Resources */,
 				46880B7E19C43A67006E1F66 /* CloseSelected.png in Resources */,
 				630A07B61E11A31C0018A84F /* .gitkeep in Resources */,
 				630A07BB1E11A3EF0018A84F /* openmon.sqlite in Resources */,
-				630A07A61E11A31B0018A84F /* .gitkeep in Resources */,
 				630A07BD1E11A3EF0018A84F /* pokemon.csv in Resources */,
 				630A07B01E11A31C0018A84F /* .gitkeep in Resources */,
 			);
@@ -643,17 +660,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27915F451E1B719A00EB9890 /* Mon.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
+				27915F3A1E1B717F00EB9890 /* sqlite3.c in Sources */,
 				630A07AD1E11A31C0018A84F /* GameState.cpp in Sources */,
-				27CE90EB1E1479C3003DC599 /* mon.cpp in Sources */,
+				27915F4B1E1B719A00EB9890 /* Move.cpp in Sources */,
 				630A07B11E11A31C0018A84F /* HelloWorldScene.cpp in Sources */,
-				630A07A71E11A31B0018A84F /* DataAccess.cpp in Sources */,
-				27D4F9651E14EEAE0010D1F0 /* Move.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
+				27915F471E1B719A00EB9890 /* MonStatus.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
+				27915F491E1B719A00EB9890 /* MonType.cpp in Sources */,
+				27915F361E1B717F00EB9890 /* DataAccess.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
-				630A07AB1E11A31C0018A84F /* sqlite3.c in Sources */,
-				630A07A91E11A31C0018A84F /* MonLoader.cpp in Sources */,
+				27915F381E1B717F00EB9890 /* MonLoader.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -661,15 +680,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27D4F9661E14EEAE0010D1F0 /* Move.cpp in Sources */,
 				46880B8919C43A87006E1F66 /* AppDelegate.cpp in Sources */,
+				27915F371E1B717F00EB9890 /* DataAccess.cpp in Sources */,
+				27915F4A1E1B719A00EB9890 /* MonType.cpp in Sources */,
+				27915F461E1B719A00EB9890 /* Mon.cpp in Sources */,
 				630A07AE1E11A31C0018A84F /* GameState.cpp in Sources */,
-				27CE90EC1E1479C3003DC599 /* mon.cpp in Sources */,
+				27915F4C1E1B719A00EB9890 /* Move.cpp in Sources */,
 				630A07B21E11A31C0018A84F /* HelloWorldScene.cpp in Sources */,
-				630A07A81E11A31B0018A84F /* DataAccess.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
-				630A07AA1E11A31C0018A84F /* MonLoader.cpp in Sources */,
-				630A07AC1E11A31C0018A84F /* sqlite3.c in Sources */,
+				27915F481E1B719A00EB9890 /* MonStatus.cpp in Sources */,
+				27915F3B1E1B717F00EB9890 /* sqlite3.c in Sources */,
+				27915F391E1B717F00EB9890 /* MonLoader.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
