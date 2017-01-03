@@ -1,6 +1,6 @@
 #include "AppDelegate.h"
 #include "Scenes/HelloWorldScene.h"
-#include "DBMS/DataAccess.hpp"
+#include "Data/DataAccess.hpp"
 
 using namespace cocos2d;
 
@@ -64,6 +64,15 @@ bool AppDelegate::applicationDidFinishLaunching()
 		
 	}
     // End DataAccess Examples
+
+    // Mon class examples/tests
+    try {
+        
+    }  catch (...) {
+
+    }
+    // End Mon class examples/tests
+
     
     // initialize director
     auto director = Director::getInstance();

@@ -1,80 +1,72 @@
 #pragma once
 
+#include <memory>
 #include <vector>
 #include <string>
 #include "MonType.hpp"
-#include "StatusCondition.hpp"
+#include "MonStatus.hpp"
+// #include "Move.hpp"
 
 namespace OpenMonObjects
 {
+    struct BSVs 
+    {
+        int hp;
+        int attack;
+        int defense;
+        int speed;
+        int special_attack;
+        int special_defense;
+
+        BSVs() { }
+        BSVs(BSVs &bsvs)
+            : hp(bsvs.hp), attack(bsvs.attack), defense(bsvs.defense), speed(bsvs.speed), 
+              special_attack(bsvs.special_attack), special_defense(bsvs.special_defense) { }
+    };
+
+    struct CSVs : public BSVs 
+    {
+        int accuracy;
+
+        CSVs() { }
+        CSVs(BSVs &bsvs)
+            : BSVs(bsvs) { }
+    };
+
     class Mon {
     public:
-        Mon(std::string name, int lvl, int b_hp, int b_atk, int b_def,
-            int b_spcl_atk, int b_spcl_def, int b_speed,
-            MonType MonType_1, Type type_2);
+        Mon(BSVs &base_stats, MonType &primary, MonType &secondary);
+        Mon(BSVs &base_stats, CSVs &current_stats, int level, int max_hp, MonType &primary, MonType &secondary);
         
-        int GetCurrentHp();
-        void SetCurrentHp(int value);
-        void RestoreHp(int value);
-        void TakeDamage(int attackDamage);
-        int GetLevel();
-        int GetSpeed();
+        // Getters/Setters
+        BSVs const& base_stats() const { return base_stats_; }
+        CSVs const& current_stats() const { return current_stats_; }
+        int current_hp() const { return current_stats_.hp; }
+        void current_hp(int value) { current_stats_.hp = value; }
+        int level() const { return level_; }
+        int speed() const { return current_stats_.speed; }
+        std::string const& name() const { return name_; }
+        MonStatus const& status_condition() const { return status_condition_; }
+        
+        // Other Methods
         bool IsFainted();
         bool IsConfused();
-        void SetFainted(bool faint);
-        std::string GetName();
-        Status GetStatusCondition();
+        void RestoreHp(int value);
+        void TakeDamage(int value);
         void ResetStatsToDefault();
         
     private:
-        int ScaleHp(int bsv_hp_value);
+        int ScaleHp();
         
-        // Base stats (BSVs)
-        // https://github.com/PokeAPI/pokeapi/blob/master/data/v2/csv/pokemon_stats.csv
-        // Format of CSV is
-        // 1: Base HP
-        // 2: Base Attack
-        // 3: Base Defense
-        // 4: Base Special Attack
-        // 5: Base Special Defense
-        // 6: Base Speed
-        
-        int base_hp_value_;
-        int base_attack_;
-        int base_defense_;
-        int base_special_attk_;
-        int base_special_def_;
-        int base_speed_;
-        
-        // Moves can lower the Stat values of the Mon
-        int current_attack;
-        int current_defense;
-        int current_special_attk;
-        int current_special_def;
-        int current_speed;
-        //int current_accuracy; // TODO mon needs an accuracy stat as well as the move accuracy
-        
-        // Pokemun attributes
-        std::string mon_name;
-        int level;
-        int max_hp;
-        int current_hp;
-        Type primary_type;
-        Type secondary_type;
-        
-        // Status flags
-        bool confused;
-        bool fainted;
-        Status status_cond;
-        
-        // TODO figure out how to do weaknesses based on type(s) issue will be for edge cases where one type for the mon is weak to
-        // some type but the other resists it (think a fire and ground type Mon being neutral to ice moves)
-        std::vector<Type> type_weaknesses;
-        std::vector<Type> type_strengths;
-        std::vector<Type> type_resistances;
-        
-        //vector<Move> move_set;
-        
+        std::string name_;
+        int level_;
+        int max_hp_;
+        BSVs base_stats_;
+        CSVs current_stats_;
+        MonStatus status_condition_;
+        MonType primary_type_;
+        MonType secondary_type_;
+        // std::vector<std::unique_ptr<Move>> move_set_;
     };
 
 }

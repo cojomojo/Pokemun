@@ -1,103 +1,70 @@
-#include "mon.hpp"
+#include "Mon.hpp"
 
-Mon::Mon(string name, int lvl, int b_hp, int b_atk, int b_def,
-         int b_spcl_atk, int b_spcl_def, int b_speed,
-         Type type_1, Type type_2) {
-    
-    name = mon_name;
-    max_hp = ScaleHp(b_hp);
-    level = lvl;
-    
-    base_attack = b_atk;
-    base_defense = b_def;
-    base_special_attk = b_spcl_atk;
-    base_special_def = b_spcl_def;
-    base_speed = b_speed;
-    
-    current_attack = b_atk;
-    current_defense = b_def;
-    current_special_attk = b_spcl_atk;
-    current_special_def = b_spcl_def;
-    current_speed = b_speed;
-    
-    primary_type = type_1;
-    secondary_type = type_2;
-    current_hp = max_hp;
-    status_cond = no_condition;
-    confused = false;
-    fainted = false;
+using namespace OpenMonObjects;
+
+Mon::Mon(BSVs &base_stats, MonType &primary, MonType &secondary)
+    : base_stats_(base_stats), current_stats_(base_stats),
+      primary_type_(primary), secondary_type_(secondary)
+{
+    // TODO: Come up with algorithms for initial stats
+    level_ = 0;
+    max_hp_ = 100;
+    current_stats_.hp = ScaleHp();
+    current_stats_.accuracy = 100;
+    // move_set_.reserve(6);
 }
 
-int Mon::GetCurrentHp() {
-    return current_hp;
-}
-
-void Mon::SetCurrentHp(int value) {
-    current_hp = value;
-}
-
+ Mon::Mon(BSVs &base_stats, CSVs &current_stats, int level, int max_hp, MonType &primary, MonType &secondary)
+        : base_stats_(base_stats), current_stats_(current_stats),
+          level_(level), max_hp_(max_hp),
+          primary_type_(primary), secondary_type_(secondary)
+ {
+ }
 
 // Restores the Mon's HP based on the passed in value.
-// If the objects current_hp + vaule is greater than
-// the max hp, the Mon's current_hp will be set to the max.
-void Mon::RestoreHp(int value) {
-    if (current_hp + value < max_hp) {
-        current_hp += value;
+// If the objects current_stats.hp + vaule is greater than
+// the max hp, the Mon's current_stats.hp will be set to the max.
+void Mon::RestoreHp(int value) 
+{
+    if (current_stats_.hp + value < max_hp_) {
+        current_stats_.hp += value;
     }
     else {
-        current_hp = max_hp;
+        current_stats_.hp = max_hp_;
     }
 }
 
-void Mon::TakeDamage(int value) {
-    current_hp -= value; // TODO type checking for weakness/resistance
-    if (current_hp <= 0) {
-        fainted = true;
+void Mon::TakeDamage(int value) 
+{
+    current_stats_.hp -= value; // TODO type checking for weakness/resistance
+    if (current_stats_.hp <= 0) {
+        status_condition_.fainted();
     }
 }
 
-int Mon::GetLevel() {
-    return level;
+bool Mon::IsFainted() 
+{
+    return status_condition_.IsFainted();
 }
 
-int Mon::GetSpeed() {
-    return current_speed;
-}
-
-bool Mon::IsFainted() {
-    return fainted;
-}
-
-bool Mon::IsConfused() {
-    return confused;
-}
-
-void Mon::SetFainted(bool faint) {
-    fainted = faint;
-}
-
-string Mon::GetName() {
-    return mon_name;
-}
-
-Status Mon::GetStatusCondition() {
-    return status_cond;
+bool Mon::IsConfused() 
+{
+    return status_condition_.IsConfused();
 }
 
 // When you swap the active mon, confusion is removed
 // and current stat values are reset to their base values
-void Mon::ResetStatsToDefault() {
-    confused = false;
-    current_attack = base_attack;
-    current_defense = base_defense;
-    current_special_attk = base_special_attk;
-    current_special_def = base_special_def;
-    current_speed = base_speed;
+void Mon::ResetStatsToDefault() 
+{
+    status_condition_.reset();
+    current_stats_ = CSVs(base_stats_);
 }
 
-// Private functions
+// Private methods
 
-// Multiplies the Mon's stored BSV HP value by 3 to set the initial HP for the Mon
-int Mon::ScaleHp(int bsv_hp_value) {
-    return bsv_hp_value * 3; // TODO figure out a better algorithim
+// Multiplies the Mon's stored BSV HP value by 3 to set the initial HP for the Mon.
+int Mon::ScaleHp() 
+{
+    // TODO figure out a better algorithim.
+    return base_stats_.hp * 3; 
 }
