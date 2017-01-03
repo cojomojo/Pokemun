@@ -19,14 +19,14 @@
 		27915F391E1B717F00EB9890 /* MonLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27915F2D1E1B717F00EB9890 /* MonLoader.cpp */; };
 		27915F3A1E1B717F00EB9890 /* sqlite3.c in Sources */ = {isa = PBXBuildFile; fileRef = 27915F301E1B717F00EB9890 /* sqlite3.c */; };
 		27915F3B1E1B717F00EB9890 /* sqlite3.c in Sources */ = {isa = PBXBuildFile; fileRef = 27915F301E1B717F00EB9890 /* sqlite3.c */; };
-		27915F451E1B719A00EB9890 /* Mon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27915F3D1E1B719A00EB9890 /* Mon.cpp */; };
-		27915F461E1B719A00EB9890 /* Mon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27915F3D1E1B719A00EB9890 /* Mon.cpp */; };
-		27915F471E1B719A00EB9890 /* MonStatus.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27915F3F1E1B719A00EB9890 /* MonStatus.cpp */; };
-		27915F481E1B719A00EB9890 /* MonStatus.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27915F3F1E1B719A00EB9890 /* MonStatus.cpp */; };
-		27915F491E1B719A00EB9890 /* MonType.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27915F411E1B719A00EB9890 /* MonType.cpp */; };
-		27915F4A1E1B719A00EB9890 /* MonType.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27915F411E1B719A00EB9890 /* MonType.cpp */; };
-		27915F4B1E1B719A00EB9890 /* Move.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27915F431E1B719A00EB9890 /* Move.cpp */; };
-		27915F4C1E1B719A00EB9890 /* Move.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27915F431E1B719A00EB9890 /* Move.cpp */; };
+		27915F561E1B96A900EB9890 /* Mon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27915F4E1E1B96A900EB9890 /* Mon.cpp */; };
+		27915F571E1B96A900EB9890 /* Mon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27915F4E1E1B96A900EB9890 /* Mon.cpp */; };
+		27915F581E1B96A900EB9890 /* MonStatus.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27915F501E1B96A900EB9890 /* MonStatus.cpp */; };
+		27915F591E1B96A900EB9890 /* MonStatus.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27915F501E1B96A900EB9890 /* MonStatus.cpp */; };
+		27915F5A1E1B96A900EB9890 /* MonType.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27915F521E1B96A900EB9890 /* MonType.cpp */; };
+		27915F5B1E1B96A900EB9890 /* MonType.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27915F521E1B96A900EB9890 /* MonType.cpp */; };
+		27915F5C1E1B96A900EB9890 /* Move.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27915F541E1B96A900EB9890 /* Move.cpp */; };
+		27915F5D1E1B96A900EB9890 /* Move.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27915F541E1B96A900EB9890 /* Move.cpp */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		294D0D641D0D56D500F7F5D4 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 294D0D631D0D56D500F7F5D4 /* CoreText.framework */; };
 		3EACC98F19EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
@@ -153,14 +153,14 @@
 		27915F311E1B717F00EB9890 /* sqlite3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqlite3.h; sourceTree = "<group>"; };
 		27915F321E1B717F00EB9890 /* sqlite3ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqlite3ext.h; sourceTree = "<group>"; };
 		27915F331E1B717F00EB9890 /* SqlValue.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SqlValue.hpp; sourceTree = "<group>"; };
-		27915F3D1E1B719A00EB9890 /* Mon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Mon.cpp; sourceTree = "<group>"; };
-		27915F3E1E1B719A00EB9890 /* Mon.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Mon.hpp; sourceTree = "<group>"; };
-		27915F3F1E1B719A00EB9890 /* MonStatus.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MonStatus.cpp; sourceTree = "<group>"; };
-		27915F401E1B719A00EB9890 /* MonStatus.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MonStatus.hpp; sourceTree = "<group>"; };
-		27915F411E1B719A00EB9890 /* MonType.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MonType.cpp; sourceTree = "<group>"; };
-		27915F421E1B719A00EB9890 /* MonType.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MonType.hpp; sourceTree = "<group>"; };
-		27915F431E1B719A00EB9890 /* Move.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Move.cpp; sourceTree = "<group>"; };
-		27915F441E1B719A00EB9890 /* Move.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Move.hpp; sourceTree = "<group>"; };
+		27915F4E1E1B96A900EB9890 /* Mon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Mon.cpp; sourceTree = "<group>"; };
+		27915F4F1E1B96A900EB9890 /* Mon.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Mon.hpp; sourceTree = "<group>"; };
+		27915F501E1B96A900EB9890 /* MonStatus.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MonStatus.cpp; sourceTree = "<group>"; };
+		27915F511E1B96A900EB9890 /* MonStatus.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MonStatus.hpp; sourceTree = "<group>"; };
+		27915F521E1B96A900EB9890 /* MonType.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MonType.cpp; sourceTree = "<group>"; };
+		27915F531E1B96A900EB9890 /* MonType.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MonType.hpp; sourceTree = "<group>"; };
+		27915F541E1B96A900EB9890 /* Move.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Move.cpp; sourceTree = "<group>"; };
+		27915F551E1B96A900EB9890 /* Move.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Move.hpp; sourceTree = "<group>"; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		294D0D631D0D56D500F7F5D4 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
 		3EACC98E19EE6D4300EB3C5E /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
@@ -329,20 +329,19 @@
 			path = sqlite;
 			sourceTree = "<group>";
 		};
-		27915F3C1E1B719A00EB9890 /* GameObjects */ = {
+		27915F4D1E1B96A900EB9890 /* GameObjects */ = {
 			isa = PBXGroup;
 			children = (
-				27915F3D1E1B719A00EB9890 /* Mon.cpp */,
-				27915F3E1E1B719A00EB9890 /* Mon.hpp */,
-				27915F3F1E1B719A00EB9890 /* MonStatus.cpp */,
-				27915F401E1B719A00EB9890 /* MonStatus.hpp */,
-				27915F411E1B719A00EB9890 /* MonType.cpp */,
-				27915F421E1B719A00EB9890 /* MonType.hpp */,
-				27915F431E1B719A00EB9890 /* Move.cpp */,
-				27915F441E1B719A00EB9890 /* Move.hpp */,
+				27915F4E1E1B96A900EB9890 /* Mon.cpp */,
+				27915F4F1E1B96A900EB9890 /* Mon.hpp */,
+				27915F501E1B96A900EB9890 /* MonStatus.cpp */,
+				27915F511E1B96A900EB9890 /* MonStatus.hpp */,
+				27915F521E1B96A900EB9890 /* MonType.cpp */,
+				27915F531E1B96A900EB9890 /* MonType.hpp */,
+				27915F541E1B96A900EB9890 /* Move.cpp */,
+				27915F551E1B96A900EB9890 /* Move.hpp */,
 			);
-			name = GameObjects;
-			path = Data/GameObjects;
+			path = GameObjects;
 			sourceTree = "<group>";
 		};
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
@@ -404,7 +403,7 @@
 			isa = PBXGroup;
 			children = (
 				27915F291E1B717F00EB9890 /* Data */,
-				27915F3C1E1B719A00EB9890 /* GameObjects */,
+				27915F4D1E1B96A900EB9890 /* GameObjects */,
 				630A079D1E11A31B0018A84F /* Scenes */,
 				630A07A11E11A31B0018A84F /* Sprites */,
 				630A07A31E11A31B0018A84F /* UI_Elements */,
@@ -660,16 +659,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27915F451E1B719A00EB9890 /* Mon.cpp in Sources */,
+				27915F561E1B96A900EB9890 /* Mon.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				27915F3A1E1B717F00EB9890 /* sqlite3.c in Sources */,
 				630A07AD1E11A31C0018A84F /* GameState.cpp in Sources */,
-				27915F4B1E1B719A00EB9890 /* Move.cpp in Sources */,
+				27915F5C1E1B96A900EB9890 /* Move.cpp in Sources */,
 				630A07B11E11A31C0018A84F /* HelloWorldScene.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
-				27915F471E1B719A00EB9890 /* MonStatus.cpp in Sources */,
+				27915F581E1B96A900EB9890 /* MonStatus.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
-				27915F491E1B719A00EB9890 /* MonType.cpp in Sources */,
+				27915F5A1E1B96A900EB9890 /* MonType.cpp in Sources */,
 				27915F361E1B717F00EB9890 /* DataAccess.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				27915F381E1B717F00EB9890 /* MonLoader.cpp in Sources */,
@@ -682,13 +681,13 @@
 			files = (
 				46880B8919C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				27915F371E1B717F00EB9890 /* DataAccess.cpp in Sources */,
-				27915F4A1E1B719A00EB9890 /* MonType.cpp in Sources */,
-				27915F461E1B719A00EB9890 /* Mon.cpp in Sources */,
+				27915F5B1E1B96A900EB9890 /* MonType.cpp in Sources */,
+				27915F571E1B96A900EB9890 /* Mon.cpp in Sources */,
 				630A07AE1E11A31C0018A84F /* GameState.cpp in Sources */,
-				27915F4C1E1B719A00EB9890 /* Move.cpp in Sources */,
+				27915F5D1E1B96A900EB9890 /* Move.cpp in Sources */,
 				630A07B21E11A31C0018A84F /* HelloWorldScene.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
-				27915F481E1B719A00EB9890 /* MonStatus.cpp in Sources */,
+				27915F591E1B96A900EB9890 /* MonStatus.cpp in Sources */,
 				27915F3B1E1B717F00EB9890 /* sqlite3.c in Sources */,
 				27915F391E1B717F00EB9890 /* MonLoader.cpp in Sources */,
 			);

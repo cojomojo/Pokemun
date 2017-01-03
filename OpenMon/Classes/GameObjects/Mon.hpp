@@ -5,7 +5,7 @@
 #include <string>
 #include "MonType.hpp"
 #include "MonStatus.hpp"
-// #include "Move.hpp"
+#include "Move.hpp"
 
 namespace OpenMonObjects
 {
@@ -66,7 +66,7 @@ namespace OpenMonObjects
         MonStatus status_condition_;
         MonType primary_type_;
         MonType secondary_type_;
-        // std::vector<std::unique_ptr<Move>> move_set_;
+        std::vector<std::unique_ptr<Move>> move_set_;
     };
 
 }

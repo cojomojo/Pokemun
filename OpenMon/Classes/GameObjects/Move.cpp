@@ -1,63 +1,70 @@
-// #include "Move.hpp"
+#include "Move.hpp"
+using namespace OpenMonObjects;
 
-// Move::Move(string name, Type type, int acc, int pwr, int pp,
-//            int secondary_effect_probability, int status_effect_probability,
-//            bool priority) {
-//     move_name = name;
-//     move_type = type;
-//     accuracy = acc;
-//     power = pwr;
-//     current_pp = pp;
-//     max_pp = pp;
-//     status_effect_percentage = status_effect_probability;
-//     secondary_effect_percentage = secondary_effect_probability;
-//     priority_flag = priority;
-//     has_status_effect = false;     // TODO
-//     has_secondary_effect = false;  // TODO
-// }
+Move::Move(std::string name, MonType &move_type, int acc, int pwr, int pp,
+            int status_effect_probability, int secondary_effect_probability,
+            bool priority)
+    : move_type_(move_type)
+{
+    move_name_ = name;
+    accuracy_ = acc;
+    power_ = pwr;
+    current_pp_ = pp;
+    max_pp_ = pp;
+    status_effect_percentage_ = status_effect_probability;
+    secondary_effect_percentage_ = secondary_effect_probability;
+    priority_flag_ = priority;
+    
+    has_status_effect_ = (status_effect_probability > 0);
+    has_secondary_effect_ = (secondary_effect_probability > 0);  // != instead of >?
+ }
 
-// // returns boolean based on if the move has any pp left
-// bool Move::IsPPEmpty() {
-//     return current_pp <= 0;
-// }
+// returns boolean based on if the move has any pp left
+bool Move::IsPPEmpty()
+{
+    return current_pp_ <= 0;
+}
 
-// int Move::GetPP(){
-//     return current_pp;
-// }
+// TODO call as the main move function
+void Move::UseMove()
+{
+    current_pp_ -= 1;
+}
 
-// void Move::UseMove() {
-//     current_pp -= 1;
-// }
 
-// string Move::GetMoveName() {
-//     return move_name;
-// }
+// Returns a boolean based on if the status effect for the move
+// should be applied or not (if applicable).
+bool Move::InflictedStatusEffect()
+{
+    int rng = (std::rand() % 100) + 1;
+    return rng <= status_effect_percentage_;
+}
 
-// // Returns a boolean based on if the status effect for the move
-// // should be applied or not (if applicable).
-// bool Move::InflictedStatusEffect() {
-//     int rng = (rand() % 100) + 1;
-//     return rng <= status_effect_percentage;
-// }
+// Returns a boolean based on if the secondary effect for the move
+// should be applied or not (if applicable).
+bool Move::InflictedSecondaryEffect()
+{
+    int rng = (std::rand() % 100) + 1;
+    return rng <= secondary_effect_percentage_;
+}
 
-// // Returns a boolean based on if the secondary effect for the move
-// // should be applied or not (if applicable).
-// bool Move::InflictedSecondaryEffect() {
-//     int rng = (rand() % 100) + 1;
-//     return rng <= secondary_effect_percentage;
-// }
+// Returns true or false based on if the attack should hit or miss
+// based on the accuracy stat for the Mon
+bool Move::AttackHit()
+{
+    int rng = (std::rand() % 100) + 1;
+    return rng <= accuracy_;
+}
 
-// // Returns true or false based on if the attack should hit or miss
-// // based on the accuracy stat for the Mon
-// bool Move::AttackHit() {
-//     int rng = (rand() % 100) + 1;
-//     return rng <= accuracy;
-// }
-
-// bool Move::HasPriority() {
-//     return priority_flag;
-// }
-
-// Type Move::GetMoveType() {
-//     return move_type;
-// }
+// Restores the Move's PP based on the passed in value.
+// If the object's PP + value is greater than
+// the max pp, the object's current_pp_ will be set to the max.
+void Move::RestorePP(int value)
+{
+    if (current_pp_ + value < max_pp_) {
+        current_pp_ += value;
+    }
+    else {
+        current_pp_ = max_pp_;
+    }
+}
