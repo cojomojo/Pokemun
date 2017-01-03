@@ -7,7 +7,7 @@ Mon::Mon(BSVs &base_stats, MonType &primary, MonType &secondary)
       primary_type_(primary), secondary_type_(secondary)
 {
     // TODO: Come up with algorithms for initial stats
-    level_ = 0;
+    level_ = 1;
     max_hp_ = 100;
     current_stats_.hp = ScaleHp();
     current_stats_.accuracy = 100;
