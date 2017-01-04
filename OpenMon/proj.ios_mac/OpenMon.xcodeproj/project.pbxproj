@@ -11,6 +11,8 @@
 		1AC6FB30180E99EB004C840B /* libcocos2d iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FB07180E9839004C840B /* libcocos2d iOS.a */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		272E263A1E1CCDBC00666533 /* Trainer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 272E26381E1CCDBC00666533 /* Trainer.cpp */; };
+		272E263B1E1CCDBC00666533 /* Trainer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 272E26381E1CCDBC00666533 /* Trainer.cpp */; };
 		27915F341E1B717F00EB9890 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 27915F2A1E1B717F00EB9890 /* .gitkeep */; };
 		27915F351E1B717F00EB9890 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 27915F2A1E1B717F00EB9890 /* .gitkeep */; };
 		27915F361E1B717F00EB9890 /* DataAccess.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27915F2B1E1B717F00EB9890 /* DataAccess.cpp */; };
@@ -144,6 +146,8 @@
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D6058910D05DD3D006BFB54 /* OpenMon-mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OpenMon-mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		272E26381E1CCDBC00666533 /* Trainer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Trainer.cpp; sourceTree = "<group>"; };
+		272E26391E1CCDBC00666533 /* Trainer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Trainer.hpp; sourceTree = "<group>"; };
 		27915F2A1E1B717F00EB9890 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		27915F2B1E1B717F00EB9890 /* DataAccess.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DataAccess.cpp; sourceTree = "<group>"; };
 		27915F2C1E1B717F00EB9890 /* DataAccess.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DataAccess.hpp; sourceTree = "<group>"; };
@@ -340,6 +344,8 @@
 				27915F531E1B96A900EB9890 /* MonType.hpp */,
 				27915F541E1B96A900EB9890 /* Move.cpp */,
 				27915F551E1B96A900EB9890 /* Move.hpp */,
+				272E26381E1CCDBC00666533 /* Trainer.cpp */,
+				272E26391E1CCDBC00666533 /* Trainer.hpp */,
 			);
 			path = GameObjects;
 			sourceTree = "<group>";
@@ -670,6 +676,7 @@
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				27915F5A1E1B96A900EB9890 /* MonType.cpp in Sources */,
 				27915F361E1B717F00EB9890 /* DataAccess.cpp in Sources */,
+				272E263A1E1CCDBC00666533 /* Trainer.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				27915F381E1B717F00EB9890 /* MonLoader.cpp in Sources */,
 			);
@@ -680,6 +687,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46880B8919C43A87006E1F66 /* AppDelegate.cpp in Sources */,
+				272E263B1E1CCDBC00666533 /* Trainer.cpp in Sources */,
 				27915F371E1B717F00EB9890 /* DataAccess.cpp in Sources */,
 				27915F5B1E1B96A900EB9890 /* MonType.cpp in Sources */,
 				27915F571E1B96A900EB9890 /* Mon.cpp in Sources */,

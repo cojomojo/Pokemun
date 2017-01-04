@@ -19,7 +19,8 @@ Move::Move(std::string name, MonType &move_type, int acc, int pwr, int pp,
     has_secondary_effect_ = (secondary_effect_probability > 0);  // != instead of >?
  }
 
-// returns boolean based on if the move has any pp left
+// Returns boolean based on if the move has any pp left,
+// for example returns true if the pp is empty for the move
 bool Move::IsPPEmpty()
 {
     return current_pp_ <= 0;
