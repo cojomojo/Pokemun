@@ -8,10 +8,11 @@ Mon::Mon(BSVs &base_stats, MonType &primary, MonType &secondary)
 {
     // TODO: Come up with algorithms for initial stats
     level_ = 1;
-    max_hp_ = 100;
     current_stats_.hp = ScaleHp();
-    current_stats_.accuracy = 100;
-    // move_set_.reserve(6);
+    max_hp_ = current_stats_.hp;
+    current_stats_.accuracy = DEFAULT_ACCURACY;
+    active_ = false;
+    move_set_.reserve(MAX_NUM_MOVES);
 }
 
  Mon::Mon(BSVs &base_stats, CSVs &current_stats, int level, int max_hp, MonType &primary, MonType &secondary)
@@ -42,7 +43,14 @@ void Mon::TakeDamage(int value)
     }
 }
 
-bool Mon::IsFainted() 
+// Returns bool, if the Mon is currently in battle active_ is true
+// active_ is false if the Mon is not currently in battle
+bool Mon::IsActive()
+{
+    return active_;
+}
+
+bool Mon::IsFainted()
 {
     return status_condition_.IsFainted();
 }
@@ -65,6 +73,8 @@ void Mon::ResetStatsToDefault()
 // Multiplies the Mon's stored BSV HP value by 3 to set the initial HP for the Mon.
 int Mon::ScaleHp() 
 {
-    // TODO figure out a better algorithim.
-    return base_stats_.hp * 3; 
+    // TODO if we want the algorithm to be 100% accurate to the main games
+    // we need to do std::floor(((2 * base_stats_.hp + iv + std::floor(ev/4)) * level_)/100) + level_ + 10;
+    return base_stats_.hp * 3;
+    
 }

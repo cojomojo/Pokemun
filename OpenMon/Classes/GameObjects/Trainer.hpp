@@ -23,6 +23,8 @@ namespace OpenMonObjects {
         // TODO use mon move??
         
     private:
+        int const MAX_PARTY_SIZE = 6;
+        
         std::string trainer_name_;
         std::vector<std::unique_ptr<Mon>> mon_party_;
         

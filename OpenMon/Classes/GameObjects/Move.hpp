@@ -16,6 +16,8 @@ namespace OpenMonObjects {
         // Getters and Setters
         int current_pp() const { return current_pp_; }
         void current_pp(int value) { current_pp_ = value; }
+        int max_pp() const { return max_pp_; }
+        int power() const { return power_; }
         std::string const& Name() const { return move_name_; }
         MonType const& move_type() const { return move_type_; }
         bool priority_flag() const { return priority_flag_; }

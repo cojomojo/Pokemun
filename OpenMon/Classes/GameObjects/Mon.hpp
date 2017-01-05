@@ -41,6 +41,7 @@ namespace OpenMonObjects
         // Getters/Setters
         BSVs const& base_stats() const { return base_stats_; }
         CSVs const& current_stats() const { return current_stats_; }
+        int max_hp() const { return max_hp_; }
         int current_hp() const { return current_stats_.hp; }
         void current_hp(int value) { current_stats_.hp = value; }
         int level() const { return level_; }
@@ -49,6 +50,7 @@ namespace OpenMonObjects
         MonStatus const& status_condition() const { return status_condition_; }
         
         // Other Methods
+        bool IsActive();
         bool IsFainted();
         bool IsConfused();
         void RestoreHp(int value);
@@ -58,9 +60,13 @@ namespace OpenMonObjects
     private:
         int ScaleHp();
         
+        int const MAX_NUM_MOVES = 4;
+        int const DEFAULT_ACCURACY = 100;
+        
         std::string name_;
         int level_;
         int max_hp_;
+        bool active_;
         BSVs base_stats_;
         CSVs current_stats_;
         MonStatus status_condition_;

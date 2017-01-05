@@ -4,7 +4,7 @@ using namespace OpenMonObjects;
 Trainer::Trainer(std::string name)
 {
     trainer_name_ = name;
-    mon_party_.reserve(6);
+    mon_party_.reserve(MAX_PARTY_SIZE);
 }
 
 // Returns bool based on the status of the trainer's party of mon.
