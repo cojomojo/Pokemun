@@ -4,6 +4,7 @@
 
 #include "GameObjects/Mon.hpp"
 
+
 using namespace OpenMonObjects;
 using namespace cocos2d;
 
@@ -42,8 +43,6 @@ bool AppDelegate::applicationDidFinishLaunching()
     // Begin DataAccess Examples
 	try {
         
-        RunObjectTests();  // TODO more testing
-        
 		OpenMonData::DataAccess db;
 		db.OpenConnection();
 
@@ -71,13 +70,15 @@ bool AppDelegate::applicationDidFinishLaunching()
 	}
     // End DataAccess Examples
 
-    // Mon class examples/tests
+    // GameObjects examples/tests
     try {
+        
+        RunObjectTests();  // TODO more testing
         
     }  catch (...) {
 
     }
-    // End Mon class examples/tests
+    // End GameObjects examples/tests
 
     
     // initialize director
@@ -164,25 +165,25 @@ void AppDelegate::RunObjectTests()
      ******************************/
     
     // Test true priority flag
-    Move test_priority_true("test", test_type, ACCURACY, POWER, PP, 0, 0, true);
+    Move test_priority_true("testMove", test_type, ACCURACY, POWER, PP, 0, 0, true);
     bool actual_true_priority = test_priority_true.priority_flag();
     bool expected_true_priority = true;
     assert(actual_true_priority == expected_true_priority);
     
     // Test false priority flag
-    Move test_priority_false("test", test_type, ACCURACY, POWER, PP, 0, 0, false);
+    Move test_priority_false("testMove", test_type, ACCURACY, POWER, PP, 0, 0, false);
     bool actual_false_priority = test_priority_false.priority_flag();
     bool expected_false_priority = false;
     assert(actual_false_priority == expected_false_priority);
     
     // Test that the max pp is set correctly at creation of the object
-    Move test_max_pp("test", test_type, ACCURACY, POWER, PP, 0, 0, true);
+    Move test_max_pp("testMove", test_type, ACCURACY, POWER, PP, 0, 0, true);
     int actual_max_pp = test_max_pp.max_pp();
     int expected_max_pp = 15;
     assert(actual_max_pp == expected_max_pp);
     
     // Test PP set from 15 to 10
-    Move test_pp_set("test", test_type, ACCURACY, POWER, PP, 0, 0, true);
+    Move test_pp_set("testMove", test_type, ACCURACY, POWER, PP, 0, 0, true);
     int set_pp = 10;
     int expected_pp = 10;
     test_pp_set.current_pp(set_pp);
@@ -190,7 +191,7 @@ void AppDelegate::RunObjectTests()
     assert(actual_pp == expected_pp);
     
     // Test that a PP restore over max sets to max
-    Move test_pp_max_restore("test", test_type, ACCURACY, POWER, PP, 0, 0, true);
+    Move test_pp_max_restore("testMove", test_type, ACCURACY, POWER, PP, 0, 0, true);
     int added_pp_value = 6;
     int expected_pp_value = 15;
     int set_value = 10;
@@ -200,7 +201,7 @@ void AppDelegate::RunObjectTests()
     assert(actual_pp_value == expected_pp_value);
     
     // Test that a PP partial restore not to the max adds the value and the current pp
-    Move test_pp_partial_restore("test", test_type, ACCURACY, POWER, PP, 0, 0, true);
+    Move test_pp_partial_restore("testMove", test_type, ACCURACY, POWER, PP, 0, 0, true);
     test_pp_partial_restore.current_pp(6);
     int pp_value_added = 5;
     int new_pp_expected = 11;
@@ -209,38 +210,38 @@ void AppDelegate::RunObjectTests()
     assert(current_pp_value == new_pp_expected);
     
     // Test Secondary Effect with 0% input (should be false)
-    Move test_no_secondary_effect("test", test_type, ACCURACY, POWER, PP, 0, 0, true);
+    Move test_no_secondary_effect("testMove", test_type, ACCURACY, POWER, PP, 0, 0, true);
     bool actual_no_secondary = test_no_secondary_effect.has_secondary_effect();
     bool expected_no_secondary = false;
     assert(actual_no_secondary == expected_no_secondary);
     
     // Test Status Effect with 0% input (should be false)
-    Move test_no_status_effect("test", test_type, ACCURACY, POWER, PP, 0, 0, true);
+    Move test_no_status_effect("testMove", test_type, ACCURACY, POWER, PP, 0, 0, true);
     bool actual_no_status = test_no_status_effect.has_status_effect();
     bool expected_no_status = false;
     assert(actual_no_status == expected_no_status);
     
     // Test Status Effect with 25% input (should be true)
-    Move test_status_effect("test", test_type, ACCURACY, POWER, PP, 25, 0, true);
+    Move test_status_effect("testMove", test_type, ACCURACY, POWER, PP, 25, 0, true);
     bool actual_status = test_status_effect.has_status_effect();
     bool expected_status = true;
     assert(actual_status == expected_status);
     
     // Test Secondary Effect with 25% input (should be true)
-    Move test_secondary_effect("test", test_type, ACCURACY, POWER, PP, 0, 25, true);
+    Move test_secondary_effect("testMove", test_type, ACCURACY, POWER, PP, 0, 25, true);
     bool actual_secondary = test_secondary_effect.has_secondary_effect();
     bool expected_secondary = true;
     assert(actual_secondary == expected_secondary);
     
     // Test Move Used Effects
-    Move test_move_used("test", test_type, ACCURACY, POWER, PP, 0, 0, true);
+    Move test_move_used("testMove", test_type, ACCURACY, POWER, PP, 0, 0, true);
     test_move_used.UseMove();
     int actual_remaining_pp = test_move_used.current_pp();
     int expected_remaining_pp = 14;
     assert(expected_remaining_pp == actual_remaining_pp);
     
     // Test that the pp is empty
-    Move test_pp_empty("test", test_type, ACCURACY, POWER, PP, 0, 0, true);
+    Move test_pp_empty("testMove", test_type, ACCURACY, POWER, PP, 0, 0, true);
     int set_empty = 0;
     test_pp_empty.current_pp(set_empty);
     bool actual_pp_is_empty = test_pp_empty.IsPPEmpty();
@@ -252,7 +253,58 @@ void AppDelegate::RunObjectTests()
     * Mon Object Tests
     ******************************/
     
+    int const TEST_BSV_VALUE = 30;
     
+    // TODO I think there is a way setting BSVs is supposed to be done and this isn't it
+    BSVs test_bsvs;
+    test_bsvs.hp = TEST_BSV_VALUE;
+    test_bsvs.attack = TEST_BSV_VALUE;
+    test_bsvs.defense = TEST_BSV_VALUE;
+    test_bsvs.speed = TEST_BSV_VALUE;
+    test_bsvs.special_attack = TEST_BSV_VALUE;
+    test_bsvs.special_defense = TEST_BSV_VALUE;
+    
+    // Test that the max hp is set correctly at creation of the object
+    Mon test_mon_max_hp("testMon", test_bsvs, test_type, test_secondary_type);
+    int actual_max_hp = test_mon_max_hp.max_hp();
+    int expected_max_hp = 90;
+    assert(expected_max_hp == actual_max_hp);
+    
+    // Test HP set from 90 to 50
+    Mon test_hp_set("testMon", test_bsvs, test_type, test_secondary_type);
+    int set_hp = 50;
+    int expected_hp = 50;
+    test_hp_set.current_hp(set_hp);
+    int actual_current_hp = test_hp_set.current_hp();
+    assert(expected_hp == actual_current_hp);
+    
+    // Test that a HP restore over max sets to max
+    Mon test_hp_max_restore("testMon", test_bsvs, test_type, test_secondary_type);
+    int added_hp_value = 50;
+    int expected_hp_value = 90;
+    int set_hp_value = 60;
+    test_hp_max_restore.current_hp(set_hp_value);
+    test_hp_max_restore.RestoreHp(added_hp_value);
+    int actual_hp_value = test_hp_max_restore.current_hp();
+    assert(actual_hp_value == expected_hp_value);
+    
+    // Test that a HP partial restore not to the max adds the value and the current HP
+    Mon test_hp_partial_restore("testMon", test_bsvs, test_type, test_secondary_type);
+    int added_hp_partial = 25;
+    int expected_value_hp = 55;
+    int set_hp_value_partial = 30;
+    test_hp_partial_restore.current_hp(set_hp_value_partial);
+    test_hp_partial_restore.RestoreHp(added_hp_partial);
+    int actual_hp_value_partial = test_hp_partial_restore.current_hp();
+    assert(actual_hp_value_partial == expected_value_hp);
+    
+    // Test that the mon can take damage
+    Mon test_damage("testMon", test_bsvs, test_type, test_secondary_type);
+    int damage = 50;
+    int expected_remaining_hp = 40;
+    test_damage.TakeDamage(damage);
+    int actual_remaining_hp = test_damage.current_hp();
+    assert(expected_remaining_hp == actual_remaining_hp);
     
     
     /******************************

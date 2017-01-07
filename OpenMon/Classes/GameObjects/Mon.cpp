@@ -2,11 +2,12 @@
 
 using namespace OpenMonObjects;
 
-Mon::Mon(BSVs &base_stats, MonType &primary, MonType &secondary)
+Mon::Mon(std::string name, BSVs &base_stats, MonType &primary, MonType &secondary)
     : base_stats_(base_stats), current_stats_(base_stats),
       primary_type_(primary), secondary_type_(secondary)
 {
     // TODO: Come up with algorithms for initial stats
+    name_ = name;
     level_ = 1;
     current_stats_.hp = ScaleHp();
     max_hp_ = current_stats_.hp;
@@ -15,11 +16,13 @@ Mon::Mon(BSVs &base_stats, MonType &primary, MonType &secondary)
     move_set_.reserve(MAX_NUM_MOVES);
 }
 
- Mon::Mon(BSVs &base_stats, CSVs &current_stats, int level, int max_hp, MonType &primary, MonType &secondary)
+ Mon::Mon(std::string name, BSVs &base_stats, CSVs &current_stats, int level, int max_hp, MonType &primary, MonType &secondary)
         : base_stats_(base_stats), current_stats_(current_stats),
           level_(level), max_hp_(max_hp),
           primary_type_(primary), secondary_type_(secondary)
  {
+     name_ = name;
+     move_set_.reserve(MAX_NUM_MOVES);
  }
 
 // Restores the Mon's HP based on the passed in value.
@@ -43,13 +46,6 @@ void Mon::TakeDamage(int value)
     }
 }
 
-// Returns bool, if the Mon is currently in battle active_ is true
-// active_ is false if the Mon is not currently in battle
-bool Mon::IsActive()
-{
-    return active_;
-}
-
 bool Mon::IsFainted()
 {
     return status_condition_.IsFainted();
@@ -64,7 +60,7 @@ bool Mon::IsConfused()
 // and current stat values are reset to their base values
 void Mon::ResetStatsToDefault() 
 {
-    status_condition_.reset();
+    status_condition_.reset(); // TODO only confused can be reset on swap
     current_stats_ = CSVs(base_stats_);
 }
 

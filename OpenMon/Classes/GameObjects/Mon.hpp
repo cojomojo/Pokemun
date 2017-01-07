@@ -35,8 +35,8 @@ namespace OpenMonObjects
 
     class Mon {
     public:
-        Mon(BSVs &base_stats, MonType &primary, MonType &secondary);
-        Mon(BSVs &base_stats, CSVs &current_stats, int level, int max_hp, MonType &primary, MonType &secondary);
+        Mon(std::string name, BSVs &base_stats, MonType &primary, MonType &secondary);
+        Mon(std::string name, BSVs &base_stats, CSVs &current_stats, int level, int max_hp, MonType &primary, MonType &secondary);
         
         // Getters/Setters
         BSVs const& base_stats() const { return base_stats_; }
@@ -46,11 +46,12 @@ namespace OpenMonObjects
         void current_hp(int value) { current_stats_.hp = value; }
         int level() const { return level_; }
         int speed() const { return current_stats_.speed; }
+        bool active() const { return active_; }
+        void active(bool is_active) { active_ = is_active; }
         std::string const& name() const { return name_; }
         MonStatus const& status_condition() const { return status_condition_; }
         
         // Other Methods
-        bool IsActive();
         bool IsFainted();
         bool IsConfused();
         void RestoreHp(int value);
