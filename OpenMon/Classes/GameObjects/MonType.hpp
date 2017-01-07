@@ -11,6 +11,10 @@ namespace OpenMonObjects
     class MonType 
     {
     public:
+        // Constructor without the efficacy map, used for the object testing for simplicity
+        // TODO remove and use the actual constructor for the tests later
+        MonType(int id, std::string type_name);
+        
         MonType(int id, std::string type_name, std::map<int,int> &efficacy);
 
         int id() const { return id_; }
