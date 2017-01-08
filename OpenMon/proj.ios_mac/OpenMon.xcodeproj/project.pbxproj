@@ -90,6 +90,8 @@
 		630A07BB1E11A3EF0018A84F /* openmon.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 630A07B81E11A3EF0018A84F /* openmon.sqlite */; };
 		630A07BC1E11A3EF0018A84F /* pokemon.csv in Resources */ = {isa = PBXBuildFile; fileRef = 630A07B91E11A3EF0018A84F /* pokemon.csv */; };
 		630A07BD1E11A3EF0018A84F /* pokemon.csv in Resources */ = {isa = PBXBuildFile; fileRef = 630A07B91E11A3EF0018A84F /* pokemon.csv */; };
+		638EB9521E223B590081976F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 638EB94F1E223B1B0081976F /* main.cpp */; };
+		638EB9531E223B630081976F /* MonTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 638EB94E1E223B1B0081976F /* MonTests.cpp */; };
 		8262943E1AAF051F00CB7CF7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8262943D1AAF051F00CB7CF7 /* Security.framework */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
@@ -139,6 +141,18 @@
 			remoteInfo = "libcocos2d tvOS";
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		638EB9411E223AF10081976F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1AC6FAE5180E9839004C840B /* cocos2d_libs.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2d_libs.xcodeproj; path = ../cocos2d/build/cocos2d_libs.xcodeproj; sourceTree = "<group>"; };
@@ -219,6 +233,10 @@
 		630A07A41E11A31B0018A84F /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		630A07B81E11A3EF0018A84F /* openmon.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = openmon.sqlite; sourceTree = "<group>"; };
 		630A07B91E11A3EF0018A84F /* pokemon.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pokemon.csv; sourceTree = "<group>"; };
+		638EB9431E223AF10081976F /* OpenMon-tests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "OpenMon-tests"; sourceTree = BUILT_PRODUCTS_DIR; };
+		638EB94C1E223B1B0081976F /* catch.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = catch.hpp; sourceTree = "<group>"; };
+		638EB94E1E223B1B0081976F /* MonTests.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MonTests.cpp; sourceTree = "<group>"; };
+		638EB94F1E223B1B0081976F /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		8262943D1AAF051F00CB7CF7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -272,6 +290,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		638EB9401E223AF10081976F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -295,6 +320,7 @@
 			children = (
 				1D6058910D05DD3D006BFB54 /* OpenMon-mobile.app */,
 				5087E76F17EB910900C73F5D /* OpenMon-desktop.app */,
+				638EB9431E223AF10081976F /* OpenMon-tests */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -353,6 +379,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				638EB94B1E223B1A0081976F /* Tests */,
 				46880B8319C43A87006E1F66 /* Classes */,
 				46880B7519C43A67006E1F66 /* Resources */,
 				1AC6FAE5180E9839004C840B /* cocos2d_libs.xcodeproj */,
@@ -505,6 +532,24 @@
 			path = data;
 			sourceTree = "<group>";
 		};
+		638EB94B1E223B1A0081976F /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				638EB94C1E223B1B0081976F /* catch.hpp */,
+				638EB94D1E223B1B0081976F /* GameObjects */,
+				638EB94F1E223B1B0081976F /* main.cpp */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		638EB94D1E223B1B0081976F /* GameObjects */ = {
+			isa = PBXGroup;
+			children = (
+				638EB94E1E223B1B0081976F /* MonTests.cpp */,
+			);
+			path = GameObjects;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -544,6 +589,23 @@
 			productReference = 5087E76F17EB910900C73F5D /* OpenMon-desktop.app */;
 			productType = "com.apple.product-type.application";
 		};
+		638EB9421E223AF10081976F /* OpenMon-tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 638EB94A1E223AF20081976F /* Build configuration list for PBXNativeTarget "OpenMon-tests" */;
+			buildPhases = (
+				638EB93F1E223AF10081976F /* Sources */,
+				638EB9401E223AF10081976F /* Frameworks */,
+				638EB9411E223AF10081976F /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "OpenMon-tests";
+			productName = "OpenMon-tests";
+			productReference = 638EB9431E223AF10081976F /* OpenMon-tests */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -551,6 +613,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0500;
+				TargetAttributes = {
+					638EB9421E223AF10081976F = {
+						CreatedOnToolsVersion = 8.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "OpenMon" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -574,6 +642,7 @@
 			targets = (
 				1D6058900D05DD3D006BFB54 /* OpenMon-mobile */,
 				5087E73D17EB910900C73F5D /* OpenMon-desktop */,
+				638EB9421E223AF10081976F /* OpenMon-tests */,
 			);
 		};
 /* End PBXProject section */
@@ -698,6 +767,15 @@
 				27915F591E1B96A900EB9890 /* MonStatus.cpp in Sources */,
 				27915F3B1E1B717F00EB9890 /* sqlite3.c in Sources */,
 				27915F391E1B717F00EB9890 /* MonLoader.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		638EB93F1E223AF10081976F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				638EB9521E223B590081976F /* main.cpp in Sources */,
+				638EB9531E223B630081976F /* MonTests.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -841,6 +919,86 @@
 			};
 			name = Release;
 		};
+		638EB9471E223AF20081976F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		638EB9481E223AF20081976F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -910,6 +1068,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
+		};
+		638EB94A1E223AF20081976F /* Build configuration list for PBXNativeTarget "OpenMon-tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				638EB9471E223AF20081976F /* Debug */,
+				638EB9481E223AF20081976F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "OpenMon" */ = {
 			isa = XCConfigurationList;
