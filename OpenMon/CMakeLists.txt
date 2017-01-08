@@ -27,6 +27,7 @@ cmake_policy(SET CMP0017 NEW)
 cmake_minimum_required(VERSION 3.1)
 
 set(APP_NAME OpenMon)
+string(TOLOWER ${APP_NAME} LIB_NAME)
 project (${APP_NAME})
 
 set(COCOS2D_ROOT ${CMAKE_SOURCE_DIR}/cocos2d)
@@ -81,7 +82,7 @@ else()
   endif()
 endif(MSVC)
 
-
+# Includes
 set(PLATFORM_SPECIFIC_SRC)
 set(PLATFORM_SPECIFIC_HEADERS)
 
@@ -93,7 +94,7 @@ elseif(LINUX)
     set(PLATFORM_SPECIFIC_SRC
       proj.linux/main.cpp
     )
-elseif ( WIN32 )
+elseif (WIN32)
     set(PLATFORM_SPECIFIC_SRC
       proj.win32/main.cpp
     )
@@ -114,43 +115,65 @@ include_directories(
   ${COCOS2D_ROOT}/cocos/platform
   ${COCOS2D_ROOT}/cocos/audio/include/
   Classes
+  external
 )
-if ( WIN32 )
+if (WIN32)
   include_directories(
     ${COCOS2D_ROOT}/external/glfw3/include/win32
     ${COCOS2D_ROOT}/external/win32-specific/gles/include/OGLES
   )
-endif( WIN32 )
+endif(WIN32)
 
-file(GLOB_RECURSE GAME_SRC
+file(GLOB_RECURSE GAME_LIB_SRC
   "Classes/*.c"
   "Classes/*.cpp"
-  ${PLATFORM_SPECIFIC_SRC}
+)
+
+set(GAME_SRC 
+	${GAME_LIB_SRC} ${PLATFORM_SPECIFIC_SRC}
 )
 
 file(GLOB_RECURSE GAME_HEADERS
   "Classes/*.h"
-  "classes/*.hpp"
+  "Classes/*.hpp"
   ${PLATFORM_SPECIFIC_HEADERS}
 )
 
-if( ANDROID )
-    add_library(${APP_NAME} SHARED ${GAME_SRC} ${GAME_HEADERS})
+file(GLOB_RECURSE TESTS_SRC
+	"Tests/*.c"
+	"Tests/*.cpp"
+)
+
+file(GLOB_RECURSE TESTS_HEADERS
+	"Tests/*.h"
+	"Tests/*.hpp"
+)
+
+add_library(${LIB_NAME} SHARED ${GAME_LIB_SRC} ${GAME_HEADERS})
+add_executable(${APP_NAME}Tests ${TESTS_SRC} ${TESTS_HEADERS})
+
+if(ANDROID)
+    add_library(${LIB_NAME} SHARED ${GAME_SRC} ${GAME_HEADERS})
     IF(CMAKE_BUILD_TYPE MATCHES RELEASE)
-        ADD_CUSTOM_COMMAND(TARGET ${APP_NAME} POST_BUILD COMMAND ${CMAKE_STRIP} lib${APP_NAME}.so)
+        ADD_CUSTOM_COMMAND(TARGET ${LIB_NAME} POST_BUILD COMMAND ${CMAKE_STRIP} lib${LIB_NAME}.so)
     ENDIF()
 else()
-    add_executable(${APP_NAME} ${GAME_SRC} ${GAME_HEADERS})
+    add_executable(${APP_NAME} ${PLATFORM_SPECIFIC_SRC})
 endif()
 
-target_link_libraries(${APP_NAME} cocos2d -ldl)
+target_link_libraries(${APP_NAME} ${LIB_NAME} cocos2d -ldl)
 
+set(APP_LIB_DIR "${CMAKE_BINARY_DIR}/lib")
 set(APP_BIN_DIR "${CMAKE_BINARY_DIR}/bin")
 
+set_target_properties(${LIB_NAME} PROPERTIES 
+	LIBRARY_OUTPUT_DIRECTORY "${APP_LIB_DIR}")
 set_target_properties(${APP_NAME} PROPERTIES
-     RUNTIME_OUTPUT_DIRECTORY  "${APP_BIN_DIR}")
+    RUNTIME_OUTPUT_DIRECTORY "${APP_BIN_DIR}")
+set_target_properties(${APP_NAME}Tests PROPERTIES
+    RUNTIME_OUTPUT_DIRECTORY "${APP_BIN_DIR}")
 
-if ( WIN32 )
+if (WIN32)
   #also copying dlls to binary directory for the executable to run
   pre_build(${APP_NAME}
     COMMAND ${CMAKE_COMMAND} -E remove_directory ${APP_BIN_DIR}/Resources
@@ -158,7 +181,7 @@ if ( WIN32 )
     COMMAND ${CMAKE_COMMAND} -E copy ${COCOS2D_ROOT}/external/win32-specific/gles/prebuilt/glew32.dll ${APP_BIN_DIR}/${CMAKE_BUILD_TYPE}
     COMMAND ${CMAKE_COMMAND} -E copy ${COCOS2D_ROOT}/external/win32-specific/zlib/prebuilt/zlib1.dll ${APP_BIN_DIR}/${CMAKE_BUILD_TYPE}
   )
-elseif( ANDROID )
+elseif(ANDROID)
 
 else()
   pre_build(${APP_NAME}

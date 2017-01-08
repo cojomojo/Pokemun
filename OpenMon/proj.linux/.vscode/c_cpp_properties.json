@@ -26,7 +26,8 @@
         },
         {
             "name": "OpenMon",
-            "includePath": ["/home/cody/Github/OpenMon/OpenMon/cocos2d/cocos"],
+            "includePath": ["../${workspaceRoot}/cocos2d/cocos",
+                            "../${workspaceRoot}/external/"],
             "browse" : {
                 "limitSymbolsToIncludedHeaders" : true,
                 "databaseFilename" : ""

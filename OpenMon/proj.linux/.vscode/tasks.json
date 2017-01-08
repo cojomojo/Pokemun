@@ -57,6 +57,11 @@
             "taskName": "run",
             "showOutput": "always",
             "args": ["./bin/OpenMon"]
+        },
+        {
+            "taskName": "run tests",
+            "showOutput": "always",
+            "args": ["./bin/OpenMonTests"]
         }
     ]
 }
