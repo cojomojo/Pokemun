@@ -46,23 +46,10 @@ bool AppDelegate::applicationDidFinishLaunching()
 		OpenMonData::DataAccess db;
 		db.OpenConnection();
 
-		std::string sql_statement = "SELECT * FROM pokemon LIMIT 5";
+		std::string sql_statement = "SELECT * FROM mon LIMIT 5";
 		OpenMonData::SqlResultList results = db.QueryToSqlResultList(sql_statement);
 		auto id = results.front().at("id")->GetValue<int>();
 		auto identifier = results.front().at("identifier")->GetValue<std::string>();
-
-		sql_statement = "SELECT * FROM pokemon WHERE identifier LIKE 'pikachu'";
-		OpenMonData::SqlResult result = db.QueryToSqlResult(sql_statement);
-		id = results.front().at("id")->GetValue<int>();
-		identifier = results.front().at("identifier")->GetValue<std::string>();
-
-		sql_statement = std::string("UPDATE pokemon SET id = 155 WHERE id = ") + std::to_string(id);
-		auto effected = db.ExecuteNonQuery(sql_statement);
-
-		sql_statement = "SELECT * FROM pokemon WHERE identifier LIKE 'pikachu'";
-		result = db.QueryToSqlResult(sql_statement);
-		id = results.front().at("id")->GetValue<int>();
-		identifier = results.front().at("identifier")->GetValue<std::string>();
 
 		db.CloseConnection();
 	} catch(OpenMonData::DataAccessException ex) {

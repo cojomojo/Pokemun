@@ -17,12 +17,7 @@ DataAccess::~DataAccess()
 
 void DataAccess::OpenConnection()
 {
-
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_MAC)
     const std::string db_name = "openmon.sqlite";
-#else
-	const std::string db_name = "data/openmon.sqlite";
-#endif
 
     FileUtils *fileUtils = FileUtils::getInstance();
 
