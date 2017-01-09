@@ -13,6 +13,8 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		272E263A1E1CCDBC00666533 /* Trainer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 272E26381E1CCDBC00666533 /* Trainer.cpp */; };
 		272E263B1E1CCDBC00666533 /* Trainer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 272E26381E1CCDBC00666533 /* Trainer.cpp */; };
+		2741C3021E237A7C003FACA8 /* openmon.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 2741C3011E237A7C003FACA8 /* openmon.sqlite */; };
+		2741C3031E237A7C003FACA8 /* openmon.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 2741C3011E237A7C003FACA8 /* openmon.sqlite */; };
 		27915F341E1B717F00EB9890 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 27915F2A1E1B717F00EB9890 /* .gitkeep */; };
 		27915F351E1B717F00EB9890 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 27915F2A1E1B717F00EB9890 /* .gitkeep */; };
 		27915F361E1B717F00EB9890 /* DataAccess.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27915F2B1E1B717F00EB9890 /* DataAccess.cpp */; };
@@ -86,10 +88,6 @@
 		630A07B41E11A31C0018A84F /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 630A07A21E11A31B0018A84F /* .gitkeep */; };
 		630A07B51E11A31C0018A84F /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 630A07A41E11A31B0018A84F /* .gitkeep */; };
 		630A07B61E11A31C0018A84F /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 630A07A41E11A31B0018A84F /* .gitkeep */; };
-		630A07BA1E11A3EF0018A84F /* openmon.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 630A07B81E11A3EF0018A84F /* openmon.sqlite */; };
-		630A07BB1E11A3EF0018A84F /* openmon.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 630A07B81E11A3EF0018A84F /* openmon.sqlite */; };
-		630A07BC1E11A3EF0018A84F /* pokemon.csv in Resources */ = {isa = PBXBuildFile; fileRef = 630A07B91E11A3EF0018A84F /* pokemon.csv */; };
-		630A07BD1E11A3EF0018A84F /* pokemon.csv in Resources */ = {isa = PBXBuildFile; fileRef = 630A07B91E11A3EF0018A84F /* pokemon.csv */; };
 		638EB9521E223B590081976F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 638EB94F1E223B1B0081976F /* main.cpp */; };
 		638EB9531E223B630081976F /* MonTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 638EB94E1E223B1B0081976F /* MonTests.cpp */; };
 		8262943E1AAF051F00CB7CF7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8262943D1AAF051F00CB7CF7 /* Security.framework */; };
@@ -162,6 +160,7 @@
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		272E26381E1CCDBC00666533 /* Trainer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Trainer.cpp; sourceTree = "<group>"; };
 		272E26391E1CCDBC00666533 /* Trainer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Trainer.hpp; sourceTree = "<group>"; };
+		2741C3011E237A7C003FACA8 /* openmon.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = openmon.sqlite; sourceTree = "<group>"; };
 		27915F2A1E1B717F00EB9890 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		27915F2B1E1B717F00EB9890 /* DataAccess.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DataAccess.cpp; sourceTree = "<group>"; };
 		27915F2C1E1B717F00EB9890 /* DataAccess.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DataAccess.hpp; sourceTree = "<group>"; };
@@ -231,8 +230,6 @@
 		630A07A01E11A31B0018A84F /* HelloWorldScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelloWorldScene.h; sourceTree = "<group>"; };
 		630A07A21E11A31B0018A84F /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		630A07A41E11A31B0018A84F /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		630A07B81E11A3EF0018A84F /* openmon.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = openmon.sqlite; sourceTree = "<group>"; };
-		630A07B91E11A3EF0018A84F /* pokemon.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pokemon.csv; sourceTree = "<group>"; };
 		638EB9431E223AF10081976F /* OpenMon-tests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "OpenMon-tests"; sourceTree = BUILT_PRODUCTS_DIR; };
 		638EB94C1E223B1B0081976F /* catch.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = catch.hpp; sourceTree = "<group>"; };
 		638EB94E1E223B1B0081976F /* MonTests.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MonTests.cpp; sourceTree = "<group>"; };
@@ -421,12 +418,12 @@
 		46880B7519C43A67006E1F66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				630A07B71E11A3EF0018A84F /* data */,
 				521A8EA819F11F5000D177D7 /* fonts */,
 				3EACC98E19EE6D4300EB3C5E /* res */,
 				46880B7619C43A67006E1F66 /* CloseNormal.png */,
 				46880B7719C43A67006E1F66 /* CloseSelected.png */,
 				46880B7A19C43A67006E1F66 /* HelloWorld.png */,
+				2741C3011E237A7C003FACA8 /* openmon.sqlite */,
 			);
 			name = Resources;
 			path = ../Resources;
@@ -521,15 +518,6 @@
 				630A07A41E11A31B0018A84F /* .gitkeep */,
 			);
 			path = UI_Elements;
-			sourceTree = "<group>";
-		};
-		630A07B71E11A3EF0018A84F /* data */ = {
-			isa = PBXGroup;
-			children = (
-				630A07B81E11A3EF0018A84F /* openmon.sqlite */,
-				630A07B91E11A3EF0018A84F /* pokemon.csv */,
-			);
-			path = data;
 			sourceTree = "<group>";
 		};
 		638EB94B1E223B1A0081976F /* Tests */ = {
@@ -678,8 +666,8 @@
 			files = (
 				27915F341E1B717F00EB9890 /* .gitkeep in Resources */,
 				5087E78117EB970100C73F5D /* Icon-120.png in Resources */,
+				2741C3021E237A7C003FACA8 /* openmon.sqlite in Resources */,
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,
-				630A07BA1E11A3EF0018A84F /* openmon.sqlite in Resources */,
 				630A07AF1E11A31C0018A84F /* .gitkeep in Resources */,
 				630A07B51E11A31C0018A84F /* .gitkeep in Resources */,
 				5087E77F17EB970100C73F5D /* Default@2x.png in Resources */,
@@ -691,7 +679,6 @@
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,
 				521A8E6519F0C34300D177D7 /* Default-736h@3x.png in Resources */,
 				521A8EA919F11F5000D177D7 /* fonts in Resources */,
-				630A07BC1E11A3EF0018A84F /* pokemon.csv in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
 				50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */,
@@ -720,9 +707,8 @@
 				521A8EAA19F11F5000D177D7 /* fonts in Resources */,
 				46880B7C19C43A67006E1F66 /* CloseNormal.png in Resources */,
 				46880B7E19C43A67006E1F66 /* CloseSelected.png in Resources */,
+				2741C3031E237A7C003FACA8 /* openmon.sqlite in Resources */,
 				630A07B61E11A31C0018A84F /* .gitkeep in Resources */,
-				630A07BB1E11A3EF0018A84F /* openmon.sqlite in Resources */,
-				630A07BD1E11A3EF0018A84F /* pokemon.csv in Resources */,
 				630A07B01E11A31C0018A84F /* .gitkeep in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
