@@ -117,4 +117,5 @@ lib/
 # other
 GPATH
 GRTAGS
-GTAGS 
+GTAGS
+tags
