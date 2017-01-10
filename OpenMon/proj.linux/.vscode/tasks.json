@@ -12,7 +12,7 @@
             "isBuildCommand": true,
             // Show the output window only if unrecognized errors occur.
             "showOutput": "always",
-            "args": ["cmake -DCMAKE_BUILD_TYPE=Debug -DDEBUG_MODE=ON .. && make"],
+            "args": ["cmake -DCMAKE_BUILD_TYPE=Debug -DDEBUG_MODE=ON .. && make OpenMon"],
             // Use the standard less compilation problem matcher.
             "problemMatcher": {
                 "owner": "cpp",
@@ -49,6 +49,27 @@
             }
         },
         {
+            "taskName": "build and run tests",
+            // Make this the default test command.
+            "isBuildCommand": false,
+            // Show the output window only if unrecognized errors occur.
+            "showOutput": "always",
+            "args": ["cmake -DCMAKE_BUILD_TYPE=Debug -DDEBUG_MODE=ON .. && make OpenMonTests && ./bin/OpenMonTests -r console -d yes -s"],
+            // Use the standard less compilation problem matcher.
+            "problemMatcher": {
+                "owner": "cpp",
+                "fileLocation": ["absolute"],
+                "pattern": {
+                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "message": 5
+                }
+            }
+        },
+        {
             "taskName": "clean",
             "showOutput": "always",
             "args": ["make clean"]
@@ -57,11 +78,6 @@
             "taskName": "run",
             "showOutput": "always",
             "args": ["./bin/OpenMon"]
-        },
-        {
-            "taskName": "run tests",
-            "showOutput": "always",
-            "args": ["./bin/OpenMonTests -r console -d yes -s"]
         }
     ]
 }
