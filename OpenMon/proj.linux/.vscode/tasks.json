@@ -16,7 +16,7 @@
             // Use the standard less compilation problem matcher.
             "problemMatcher": {
                 "owner": "cpp",
-                "fileLocation": ["relative", "${workspaceRoot}"],
+                "fileLocation": ["absolute"],
                 "pattern": {
                     "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
                     "file": 1,
@@ -37,7 +37,7 @@
             // Use the standard less compilation problem matcher.
             "problemMatcher": {
                 "owner": "cpp",
-                "fileLocation": ["relative", "${workspaceRoot}"],
+                "fileLocation": ["absolute"],
                 "pattern": {
                     "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
                     "file": 1,
@@ -61,7 +61,7 @@
         {
             "taskName": "run tests",
             "showOutput": "always",
-            "args": ["./bin/OpenMonTests"]
+            "args": ["./bin/OpenMonTests -r console -d yes -s"]
         }
     ]
 }

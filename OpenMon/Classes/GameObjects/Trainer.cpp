@@ -12,7 +12,7 @@ Trainer::Trainer(std::string name)
 bool Trainer::IsPartyDefeated()
 {
     for (auto & mon : mon_party_) {
-        if (!mon->IsFainted()) {
+        if (!mon->fainted()) {
             return false;
         }
     }

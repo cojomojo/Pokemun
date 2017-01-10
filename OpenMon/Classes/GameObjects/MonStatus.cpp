@@ -10,9 +10,7 @@ std::map<MonStatus::StatusConditions, std::string> const MonStatus::status_condi
     {MonStatus::StatusConditions::BURNED, "Burned"},
     {MonStatus::StatusConditions::FROZEN, "Frozen"},
     {MonStatus::StatusConditions::FLINCH, "Flinched"},
-    {MonStatus::StatusConditions::CONFUSED, "Confused"},
-    {MonStatus::StatusConditions::INFATUATED, "Infatuated"},
-    {MonStatus::StatusConditions::FAINTED, "Fainted"},
+    {MonStatus::StatusConditions::INFATUATED, "Infatuated"}
 };
 
 std::map<MonStatus::StatusConditions, bool> const MonStatus::status_condition_volatility = {
@@ -23,9 +21,7 @@ std::map<MonStatus::StatusConditions, bool> const MonStatus::status_condition_vo
     {MonStatus::StatusConditions::BURNED, false},
     {MonStatus::StatusConditions::FROZEN, false},
     {MonStatus::StatusConditions::FLINCH, true},
-    {MonStatus::StatusConditions::CONFUSED, true},
     {MonStatus::StatusConditions::INFATUATED, true},
-    {MonStatus::StatusConditions::FAINTED, false},
 };
 
 MonStatus::MonStatus()
@@ -68,20 +64,9 @@ bool MonStatus::IsFlinch()
     return condition_ == MonStatus::StatusConditions::FLINCH;
 }
 
-bool MonStatus::IsConfused()
-{
-    return condition_ == MonStatus::StatusConditions::CONFUSED;
-}
-
-
 bool MonStatus::IsInfatuated()
 {
     return condition_ == MonStatus::StatusConditions::INFATUATED;
-}
-
-bool MonStatus::IsFainted()
-{
-    return condition_ == MonStatus::StatusConditions::FAINTED;
 }
 
 bool MonStatus::IsCustom()

@@ -35,9 +35,7 @@ namespace OpenMonObjects
         void burned() { condition_ = StatusConditions::BURNED; }
         void frozen() { condition_ = StatusConditions::FROZEN; }
         void flinch() { condition_ = StatusConditions::FLINCH; }
-        void confused() { condition_ = StatusConditions::CONFUSED; }
         void infatuated() { condition_ = StatusConditions::INFATUATED; }
-        void fainted() { condition_ = StatusConditions::FAINTED; }
         void custom() { condition_ = StatusConditions::CUSTOM; }
 
         // Other methods

@@ -76,7 +76,7 @@ else()
   set(CMAKE_C_FLAGS_DEBUG "-g -Wall -DCOCOS2D_DEBUG=1")
   set(CMAKE_CXX_FLAGS_DEBUG ${CMAKE_C_FLAGS_DEBUG})
   set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -std=c99")
-  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -Wno-deprecated-declarations -Wno-reorder")
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 -Wno-deprecated-declarations -Wno-reorder")
   if(CLANG)
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -stdlib=libc++")
   endif()
@@ -162,16 +162,14 @@ else()
 endif()
 
 target_link_libraries(${APP_NAME} ${LIB_NAME} cocos2d -ldl)
+target_link_libraries(${APP_NAME}Tests ${LIB_NAME} cocos2d -ldl)
 
 set(APP_LIB_DIR "${CMAKE_BINARY_DIR}/lib")
 set(APP_BIN_DIR "${CMAKE_BINARY_DIR}/bin")
 
-set_target_properties(${LIB_NAME} PROPERTIES 
-	LIBRARY_OUTPUT_DIRECTORY "${APP_LIB_DIR}")
-set_target_properties(${APP_NAME} PROPERTIES
-    RUNTIME_OUTPUT_DIRECTORY "${APP_BIN_DIR}")
-set_target_properties(${APP_NAME}Tests PROPERTIES
-    RUNTIME_OUTPUT_DIRECTORY "${APP_BIN_DIR}")
+set_target_properties(${LIB_NAME} PROPERTIES LIBRARY_OUTPUT_DIRECTORY "${APP_LIB_DIR}")
+set_target_properties(${APP_NAME} PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${APP_BIN_DIR}")
+set_target_properties(${APP_NAME}Tests PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${APP_BIN_DIR}")
 
 if (WIN32)
   #also copying dlls to binary directory for the executable to run
