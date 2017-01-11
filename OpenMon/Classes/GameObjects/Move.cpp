@@ -37,24 +37,27 @@ void Move::UseMove()
 // should be applied or not (if applicable).
 bool Move::InflictedStatusEffect()
 {
-    int rng = (std::rand() % 100) + 1;
-    return rng <= status_effect_percentage_;
+//    int rng = (std::rand() % 100) + 1;
+//    return rng <= status_effect_percentage_;
+    return false;
 }
 
 // Returns a boolean based on if the secondary effect for the move
 // should be applied or not (if applicable).
 bool Move::InflictedSecondaryEffect()
 {
-    int rng = (std::rand() % 100) + 1;
-    return rng <= secondary_effect_percentage_;
+//    int rng = (std::rand() % 100) + 1;
+//    return rng <= secondary_effect_percentage_;
+    return false;
 }
 
 // Returns true or false based on if the attack should hit or miss
 // based on the accuracy stat for the Mon
 bool Move::AttackHit()
 {
-    int rng = (std::rand() % 100) + 1;
-    return rng <= accuracy_;
+//    int rng = (std::rand() % 100) + 1;
+//    return rng <= accuracy_;
+    return false;
 }
 
 // Restores the Move's PP based on the passed in value.

@@ -15,6 +15,12 @@
 		272E263B1E1CCDBC00666533 /* Trainer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 272E26381E1CCDBC00666533 /* Trainer.cpp */; };
 		2741C3021E237A7C003FACA8 /* openmon.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 2741C3011E237A7C003FACA8 /* openmon.sqlite */; };
 		2741C3031E237A7C003FACA8 /* openmon.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 2741C3011E237A7C003FACA8 /* openmon.sqlite */; };
+		2768AF8D1E2600B0005AA0D5 /* MonTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2768AF8A1E25FF8D005AA0D5 /* MonTests.cpp */; };
+		2768AF8E1E260288005AA0D5 /* Mon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27915F4E1E1B96A900EB9890 /* Mon.cpp */; };
+		2768AF8F1E26028E005AA0D5 /* MonStatus.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27915F501E1B96A900EB9890 /* MonStatus.cpp */; };
+		2768AF901E260292005AA0D5 /* MonType.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27915F521E1B96A900EB9890 /* MonType.cpp */; };
+		2768AF911E260295005AA0D5 /* Move.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27915F541E1B96A900EB9890 /* Move.cpp */; };
+		2768AF921E26029A005AA0D5 /* Trainer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 272E26381E1CCDBC00666533 /* Trainer.cpp */; };
 		27915F341E1B717F00EB9890 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 27915F2A1E1B717F00EB9890 /* .gitkeep */; };
 		27915F351E1B717F00EB9890 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 27915F2A1E1B717F00EB9890 /* .gitkeep */; };
 		27915F361E1B717F00EB9890 /* DataAccess.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27915F2B1E1B717F00EB9890 /* DataAccess.cpp */; };
@@ -89,7 +95,6 @@
 		630A07B51E11A31C0018A84F /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 630A07A41E11A31B0018A84F /* .gitkeep */; };
 		630A07B61E11A31C0018A84F /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 630A07A41E11A31B0018A84F /* .gitkeep */; };
 		638EB9521E223B590081976F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 638EB94F1E223B1B0081976F /* main.cpp */; };
-		638EB9531E223B630081976F /* MonTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 638EB94E1E223B1B0081976F /* MonTests.cpp */; };
 		8262943E1AAF051F00CB7CF7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8262943D1AAF051F00CB7CF7 /* Security.framework */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
@@ -161,6 +166,7 @@
 		272E26381E1CCDBC00666533 /* Trainer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Trainer.cpp; sourceTree = "<group>"; };
 		272E26391E1CCDBC00666533 /* Trainer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Trainer.hpp; sourceTree = "<group>"; };
 		2741C3011E237A7C003FACA8 /* openmon.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = openmon.sqlite; sourceTree = "<group>"; };
+		2768AF8A1E25FF8D005AA0D5 /* MonTests.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MonTests.cpp; sourceTree = "<group>"; };
 		27915F2A1E1B717F00EB9890 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		27915F2B1E1B717F00EB9890 /* DataAccess.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DataAccess.cpp; sourceTree = "<group>"; };
 		27915F2C1E1B717F00EB9890 /* DataAccess.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DataAccess.hpp; sourceTree = "<group>"; };
@@ -232,7 +238,6 @@
 		630A07A41E11A31B0018A84F /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		638EB9431E223AF10081976F /* OpenMon-tests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "OpenMon-tests"; sourceTree = BUILT_PRODUCTS_DIR; };
 		638EB94C1E223B1B0081976F /* catch.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = catch.hpp; sourceTree = "<group>"; };
-		638EB94E1E223B1B0081976F /* MonTests.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MonTests.cpp; sourceTree = "<group>"; };
 		638EB94F1E223B1B0081976F /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		8262943D1AAF051F00CB7CF7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -330,6 +335,14 @@
 				276E90E31E0C8CB80040E5E5 /* libcocos2d tvOS.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		2768AF891E25FF8D005AA0D5 /* GameObjects */ = {
+			isa = PBXGroup;
+			children = (
+				2768AF8A1E25FF8D005AA0D5 /* MonTests.cpp */,
+			);
+			path = GameObjects;
 			sourceTree = "<group>";
 		};
 		27915F291E1B717F00EB9890 /* Data */ = {
@@ -524,18 +537,10 @@
 			isa = PBXGroup;
 			children = (
 				638EB94C1E223B1B0081976F /* catch.hpp */,
-				638EB94D1E223B1B0081976F /* GameObjects */,
+				2768AF891E25FF8D005AA0D5 /* GameObjects */,
 				638EB94F1E223B1B0081976F /* main.cpp */,
 			);
 			path = Tests;
-			sourceTree = "<group>";
-		};
-		638EB94D1E223B1B0081976F /* GameObjects */ = {
-			isa = PBXGroup;
-			children = (
-				638EB94E1E223B1B0081976F /* MonTests.cpp */,
-			);
-			path = GameObjects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -760,8 +765,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2768AF911E260295005AA0D5 /* Move.cpp in Sources */,
+				2768AF8F1E26028E005AA0D5 /* MonStatus.cpp in Sources */,
+				2768AF8E1E260288005AA0D5 /* Mon.cpp in Sources */,
+				2768AF901E260292005AA0D5 /* MonType.cpp in Sources */,
+				2768AF921E26029A005AA0D5 /* Trainer.cpp in Sources */,
+				2768AF8D1E2600B0005AA0D5 /* MonTests.cpp in Sources */,
 				638EB9521E223B590081976F /* main.cpp in Sources */,
-				638EB9531E223B630081976F /* MonTests.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -850,7 +860,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
@@ -881,7 +891,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -910,7 +920,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -952,7 +962,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -988,7 +998,7 @@
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				COPY_PHASE_STRIP = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -1013,7 +1023,7 @@
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;

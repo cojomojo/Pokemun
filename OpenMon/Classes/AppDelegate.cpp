@@ -131,10 +131,6 @@ void AppDelegate::applicationWillEnterForeground() {
     // SimpleAudioEngine::getInstance()->resumeBackgroundMusic();
 }
 
-
-// TODO would be better if the tests were each their own seperate function called
-// by this master function. Would help with variable naming issues as they would be
-// in seperate function scopes, because these names are trash AF right now
 void AppDelegate::RunObjectTests()
 {
     // MonType test_type(1, "normal");
@@ -233,69 +229,4 @@ void AppDelegate::RunObjectTests()
     // bool actual_pp_is_empty = test_pp_empty.IsPPEmpty();
     // bool expected_pp_is_empty = true;
     // assert(expected_pp_is_empty == actual_pp_is_empty);
-    
-    
-    // /******************************
-    // * Mon Object Tests
-    // ******************************/
-    
-    // int const TEST_BSV_VALUE = 30;
-    
-    // // TODO I think there is a way setting BSVs is supposed to be done and this isn't it
-    // BSVs test_bsvs;
-    // test_bsvs.hp = TEST_BSV_VALUE;
-    // test_bsvs.attack = TEST_BSV_VALUE;
-    // test_bsvs.defense = TEST_BSV_VALUE;
-    // test_bsvs.speed = TEST_BSV_VALUE;
-    // test_bsvs.special_attack = TEST_BSV_VALUE;
-    // test_bsvs.special_defense = TEST_BSV_VALUE;
-    
-    // // Test that the max hp is set correctly at creation of the object
-    // Mon test_mon_max_hp("testMon", test_bsvs, test_type, test_secondary_type);
-    // int actual_max_hp = test_mon_max_hp.max_hp();
-    // int expected_max_hp = 90;
-    // assert(expected_max_hp == actual_max_hp);
-    
-    // // Test HP set from 90 to 50
-    // Mon test_hp_set("testMon", test_bsvs, test_type, test_secondary_type);
-    // int set_hp = 50;
-    // int expected_hp = 50;
-    // test_hp_set.current_hp(set_hp);
-    // int actual_current_hp = test_hp_set.current_hp();
-    // assert(expected_hp == actual_current_hp);
-    
-    // // Test that a HP restore over max sets to max
-    // Mon test_hp_max_restore("testMon", test_bsvs, test_type, test_secondary_type);
-    // int added_hp_value = 50;
-    // int expected_hp_value = 90;
-    // int set_hp_value = 60;
-    // test_hp_max_restore.current_hp(set_hp_value);
-    // test_hp_max_restore.RestoreHp(added_hp_value);
-    // int actual_hp_value = test_hp_max_restore.current_hp();
-    // assert(actual_hp_value == expected_hp_value);
-    
-    // // Test that a HP partial restore not to the max adds the value and the current HP
-    // Mon test_hp_partial_restore("testMon", test_bsvs, test_type, test_secondary_type);
-    // int added_hp_partial = 25;
-    // int expected_value_hp = 55;
-    // int set_hp_value_partial = 30;
-    // test_hp_partial_restore.current_hp(set_hp_value_partial);
-    // test_hp_partial_restore.RestoreHp(added_hp_partial);
-    // int actual_hp_value_partial = test_hp_partial_restore.current_hp();
-    // assert(actual_hp_value_partial == expected_value_hp);
-    
-    // // Test that the mon can take damage
-    // Mon test_damage("testMon", test_bsvs, test_type, test_secondary_type);
-    // int damage = 50;
-    // int expected_remaining_hp = 40;
-    // test_damage.TakeDamage(damage);
-    // int actual_remaining_hp = test_damage.current_hp();
-    // assert(expected_remaining_hp == actual_remaining_hp);
-    
-    
-    // /******************************
-    //  * Trainer Object Tests
-    //  ******************************/
-    
-    
 }

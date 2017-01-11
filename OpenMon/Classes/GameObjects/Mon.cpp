@@ -7,11 +7,11 @@ Mon::Mon(std::string name, BSVs &base_stats, MonType &primary, std::unique_ptr<M
       fainted_(false), confused_(false), active_(false)
 { 
     // TODO: Come up with algorithms for initial stats
-    // level_ = 1;
-    // max_hp_ = ScaleHp();
-    // current_stats_.hp = current_stats_.hp;
-    // current_stats_.accuracy = DEFAULT_ACCURACY;
-    // move_set_.reserve(MAX_NUM_MOVES);
+     level_ = 1;
+     max_hp_ = ScaleHp();
+     current_stats_.hp = max_hp_;
+     current_stats_.accuracy = DEFAULT_ACCURACY;
+     move_set_.reserve(MAX_NUM_MOVES);
 }
 
 Mon::Mon(std::string name, BSVs &base_stats, CSVs &current_stats, int level, int max_hp, MonType &primary, 
@@ -36,7 +36,7 @@ void Mon::RestoreHp(int value)
 void Mon::TakeDamage(int value) 
 {
     // TODO: type checking for weakness/resistance
-    current_stats_.hp -= value; 
+    current_stats_.hp -= value;
     if (current_stats_.hp <= 0) {
         fainted_ = true;
     }
