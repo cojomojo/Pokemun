@@ -37,6 +37,7 @@
 		27915F5B1E1B96A900EB9890 /* MonType.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27915F521E1B96A900EB9890 /* MonType.cpp */; };
 		27915F5C1E1B96A900EB9890 /* Move.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27915F541E1B96A900EB9890 /* Move.cpp */; };
 		27915F5D1E1B96A900EB9890 /* Move.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27915F541E1B96A900EB9890 /* Move.cpp */; };
+		27C93DBD1E275A0D000C76FE /* MoveTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27C93DBC1E275A0D000C76FE /* MoveTests.cpp */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		294D0D641D0D56D500F7F5D4 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 294D0D631D0D56D500F7F5D4 /* CoreText.framework */; };
 		3EACC98F19EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
@@ -184,6 +185,7 @@
 		27915F531E1B96A900EB9890 /* MonType.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MonType.hpp; sourceTree = "<group>"; };
 		27915F541E1B96A900EB9890 /* Move.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Move.cpp; sourceTree = "<group>"; };
 		27915F551E1B96A900EB9890 /* Move.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Move.hpp; sourceTree = "<group>"; };
+		27C93DBC1E275A0D000C76FE /* MoveTests.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MoveTests.cpp; path = ../../../Tests/GameObjects/MoveTests.cpp; sourceTree = "<group>"; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		294D0D631D0D56D500F7F5D4 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
 		3EACC98E19EE6D4300EB3C5E /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
@@ -341,6 +343,7 @@
 			isa = PBXGroup;
 			children = (
 				2768AF8A1E25FF8D005AA0D5 /* MonTests.cpp */,
+				27C93DBC1E275A0D000C76FE /* MoveTests.cpp */,
 			);
 			path = GameObjects;
 			sourceTree = "<group>";
@@ -765,6 +768,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27C93DBD1E275A0D000C76FE /* MoveTests.cpp in Sources */,
 				2768AF911E260295005AA0D5 /* Move.cpp in Sources */,
 				2768AF8F1E26028E005AA0D5 /* MonStatus.cpp in Sources */,
 				2768AF8E1E260288005AA0D5 /* Mon.cpp in Sources */,
